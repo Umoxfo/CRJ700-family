@@ -282,7 +282,7 @@ Engine.Apu = func() {
 Engine.Jet = func(n)
 {
     var jet = {n : n, serviceable: 1, fdm_throttle: 0, fdm_reverser: 0, n1: 0, n2: 0, fdm_n1: 0, fdm_n2: 0, running: 0, on_fire: 0, out_of_fuel: 0};
-    jet.fdm_throttle_idle = 0.01;
+    #jet.fdm_throttle_idle = 0.048;
 
     jet.controls = {cutoff: 0, fire_ex: 0, reverser_arm: 0, reverser_cmd: 0, starter: 0, thrust_mode: 0, throttle: 0};
 
@@ -359,7 +359,8 @@ Engine.Jet = func(n)
 		
 		if (jet.running) {
 			jet.controls.starter = 0;
-			jet.fdm_throttle = jet.fdm_throttle_idle + (1 - jet.fdm_throttle_idle) * jet.controls.throttle;
+			#jet.fdm_throttle = jet.fdm_throttle_idle + (1 - jet.fdm_throttle_idle) * jet.controls.throttle;
+			jet.fdm_throttle = jet.controls.throttle;
 			jet.n1 = jet.fdm_n1;
 			jet.n2 = jet.fdm_n2;
 		}
