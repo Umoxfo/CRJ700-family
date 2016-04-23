@@ -11,7 +11,7 @@
  http://en.wikipedia.org/wiki/Bombardier_CRJ700_series#Specifications
 -->
 
-<airplane mass="47250">
+<airplane mass="51120">
 	<!-- Approach speed is 125-140 knots http://forums.jetcareers.com/airline-pilots/57253-crj-900-v-speeds.html#post758173 -->
 	<approach speed="125" aoa="4.0" fuel="0.2">
 		<control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.7" />
@@ -19,8 +19,10 @@
 		<control-setting axis="/controls/flight/flaps-cmd" value="1.0" />
 		<control-setting axis="/controls/flight/slats-cmd" value="1.0" />
 		<control-setting axis="/fcs/gear-down" value="1.0" />
-		<solve-weight idx="0" weight="600.0" />
-		<solve-weight idx="1" weight="10.0" />
+		<solve-weight idx="0" weight="400.0" />
+		<solve-weight idx="1" weight="0.0" />
+		<solve-weight idx="2" weight="0.0" />
+		<solve-weight idx="3" weight="0.0" />
 	</approach>
 
 	<cruise speed="560" alt="35000" fuel="0.8">
@@ -29,8 +31,12 @@
 		<control-setting axis="/controls/flight/flaps-cmd" value="0.0" />
 		<control-setting axis="/controls/flight/slats-cmd" value="0.0" />
 		<control-setting axis="/fcs/gear-down" value="0.0" />
+		<!-- max payload 26380 (crew + pax + ctr cargo + aft cargo) -->
 		<solve-weight idx="0" weight="600.0" />
-		<solve-weight idx="1" weight="25800.0" />
+		<solve-weight idx="1" weight="18600.0" />
+		<!-- max cargo 7180 -->
+		<solve-weight idx="2" weight="3590.0" />
+		<solve-weight idx="3" weight="3590.0" />
 	</cruise>
 
 	<cockpit x="16.395" y="0.528" z="-0.468" />
@@ -169,8 +175,12 @@
 	<ballast x="-1.0" y="0.0" z="-2.6" mass="5000.0" />
 
 	<!-- Crew -->
-	<weight x="14.94" y="0.0" z="-1.0" mass-prop="/sim/weight[0]/weight-lb" solve-weight="1" idx="0" />
-	<!-- PAX/Cargo -->
+	<weight x="16.5" y="0.0" z="-1.0" mass-prop="/sim/weight[0]/weight-lb" solve-weight="1" idx="0" />
+	<!-- PAX -->
 	<weight x="3.5" y="0.0" z="-1.0" mass-prop="/sim/weight[1]/weight-lb" solve-weight="1" idx="1" />
+	<!-- Main Cargo -->
+	<weight x="6.3" y="0.0" z="-2.1" mass-prop="/sim/weight[2]/weight-lb" solve-weight="1" idx="2" />
+	<!-- Aft Cargo -->
+	<weight x="-10.0" y="0.0" z="-1.5" mass-prop="/sim/weight[3]/weight-lb" solve-weight="1" idx="3" />
 
 </airplane>
