@@ -35,8 +35,8 @@
 		<solve-weight idx="0" weight="600.0" />
 		<solve-weight idx="1" weight="18600.0" />
 		<!-- max cargo 7180 -->
-		<solve-weight idx="2" weight="3590.0" />
-		<solve-weight idx="3" weight="3590.0" />
+		<solve-weight idx="2" weight="5030.0" />
+		<solve-weight idx="3" weight="2150.0" />
 	</cruise>
 
 	<cockpit x="16.395" y="0.528" z="-0.468" />
@@ -170,7 +170,7 @@
 
 	<!-- Ballast to adjust center of gravity -->
 	<!-- Redistribute the mass toward the nose -->
-	<ballast x="17.26" y="0.0" z="-1.9" mass="10000.0" />
+	<ballast x="17.26" y="0.0" z="-1.9" mass="8800.0" />
 	<!-- Weight of the main landing gear assemblies (approx.) -->
 	<ballast x="-1.0" y="0.0" z="-2.6" mass="5000.0" />
 

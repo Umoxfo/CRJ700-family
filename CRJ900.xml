@@ -13,7 +13,7 @@
 
 <airplane mass="48160">
 	<!-- Approach speed is 125-140 knots http://forums.jetcareers.com/airline-pilots/57253-crj-900-v-speeds.html#post758173 -->
-	<approach speed="115" aoa="4.0" fuel="0.2">
+	<approach speed="120" aoa="4.0" fuel="0.2">
 		<control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.7" />
 		<control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.7" />
 		<control-setting axis="/controls/flight/flaps-cmd" value="1.0" />
@@ -35,8 +35,8 @@
 		<solve-weight idx="0" weight="600.0" />
 		<solve-weight idx="1" weight="15165.0" />
 		<!-- max cargo 6075 -->
-		<solve-weight idx="2" weight="3030.0" />
-		<solve-weight idx="3" weight="3030.0" />
+		<solve-weight idx="2" weight="4375.0" />
+		<solve-weight idx="3" weight="1700.0" />
 	</cruise>
 
 	<cockpit x="15.045" y="0.528" z="-0.468" />

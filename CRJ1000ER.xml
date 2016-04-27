@@ -35,8 +35,8 @@
 		<solve-weight idx="0" weight="600.0" />
 		<solve-weight idx="1" weight="18600.0" />
 		<!-- max cargo 7180 -->
-		<solve-weight idx="2" weight="3590.0" />
-		<solve-weight idx="3" weight="3590.0" />
+		<solve-weight idx="2" weight="5030.0" />
+		<solve-weight idx="3" weight="2150.0" />
 	</cruise>
 
 	<cockpit x="16.395" y="0.528" z="-0.468" />

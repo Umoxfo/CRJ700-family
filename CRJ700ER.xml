@@ -34,9 +34,9 @@
 		<!-- max payload 18055 (crew + pax + ctr cargo + aft cargo) -->
 		<solve-weight idx="0" weight="600.0" />
 		<solve-weight idx="1" weight="12080.0" />
-		<!-- max cargo 5375 -->
-		<solve-weight idx="2" weight="2687.0" />
-		<solve-weight idx="3" weight="2687.0" />
+		<!-- max cargo -->
+		<solve-weight idx="2" weight="3739.0" />
+		<solve-weight idx="3" weight="961.0" />
 	</cruise>
 
 	<cockpit x="13.105" y="0.528" z="-0.468" />
