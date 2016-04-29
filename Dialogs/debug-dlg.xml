@@ -146,6 +146,18 @@
 					<alpha>1</alpha>
 				</color>
 			</text>	
+			<text>
+				<label>Mass</label>
+				<property>yasim/gross-weight-lbs</property>
+				<format>%5.1f lbs</format>
+				<live>true</live>
+				<color>
+					<red>0.2</red>
+					<green>0.7</green>
+					<blue>0.9</blue>
+					<alpha>1</alpha>
+				</color>	
+			</text>	
 		</group>
 
 		<group>
@@ -298,6 +310,7 @@
 					<property>instrumentation/nav[0]/gs-in-range</property>
 				</visible>			
 			</text>				
+			
 		</group>
 	</group>
 </PropertyList>
