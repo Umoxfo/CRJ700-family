@@ -4,11 +4,13 @@
  Bombardier CRJ900ER YASim FDM
  By Ryan Miller
 
- Specifications can be viewed on Boeing's website:
- http://www.crj.bombardier.com/CRJ/en/specifications.jsp?langId=en&crjId=900
+modified by D-JSB
 
- More can be found on Wikipedia:
- http://en.wikipedia.org/wiki/Bombardier_CRJ700_series#Specifications
+desired CG range (x axis, nose is +, tail is -)
+MAC			25%			30%
+CRJ700		+0.190 .. +0.020
+CRJ900		-0.120 .. -0.290
+CRJ1000		-0.526 .. -0.700
 -->
 
 <airplane mass="48160">
@@ -177,7 +179,7 @@
 	<!-- Crew -->
 	<weight x="14.94" y="0.0" z="-1.0" mass-prop="/sim/weight[0]/weight-lb" solve-weight="1" idx="0" />
 	<!-- PAX -->
-	<weight x="3.5" y="0.0" z="-1.0" mass-prop="/sim/weight[1]/weight-lb" solve-weight="1" idx="1" />
+	<weight x="2.45" y="0.0" z="-1.0" mass-prop="/sim/weight[1]/weight-lb" solve-weight="1" idx="1" />
 	<!-- Main Cargo -->
 	<weight x="6.6" y="0.0" z="-2.1" mass-prop="/sim/weight[2]/weight-lb" solve-weight="1" idx="2" />
 	<!-- Aft Cargo -->
