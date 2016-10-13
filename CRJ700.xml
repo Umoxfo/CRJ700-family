@@ -15,7 +15,7 @@ CRJ1000		-0.526 .. -0.700
 
 <airplane mass="44250">
 	<!-- Approach speed is 125-140 knots http://forums.jetcareers.com/airline-pilots/57253-crj-900-v-speeds.html#post758173 -->
-	<approach speed="120" aoa="3.0" fuel="0.2">
+	<approach speed="125" aoa="2.7" fuel="0.2">
 		<control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.7" />
 		<control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.7" />
 		<control-setting axis="/controls/flight/flaps-cmd" value="1.0" />
@@ -104,7 +104,7 @@ CRJ1000		-0.526 .. -0.700
 	<!-- Vertical stabilizers -->
 	<vstab x="-11.345" y="0.0" z="-0.158" length="4.2" chord="3.498" taper="0.7" sweep="36.0" idrag="1.0">
 		<stall aoa="15" width="2" peak="1.5" />
-		<flap0 start="0.0" end="0.72" lift="1.1" drag="1.4" />
+		<flap0 start="0.0" end="0.72" lift="1.5" drag="1.4" />
 		<control-input axis="/fcs/rudder-cmd-norm" control="FLAP0" invert="true" />
 		<control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true" />
 		<control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" />
