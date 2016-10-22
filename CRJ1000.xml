@@ -14,28 +14,28 @@ CRJ1000		-0.526 .. -0.700
 
 <airplane mass="51120">
 	<!-- Approach speed is 125-140 knots http://forums.jetcareers.com/airline-pilots/57253-crj-900-v-speeds.html#post758173 -->
-	<approach speed="125" aoa="5.0" fuel="0.2">
+	<approach speed="125" aoa="3.7" fuel="0.2">
 		<control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.7" />
 		<control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.7" />
 		<control-setting axis="/controls/flight/flaps-cmd" value="1.0" />
 		<control-setting axis="/controls/flight/slats-cmd" value="1.0" />
 		<control-setting axis="/fcs/gear-down" value="1.0" />
 		<solve-weight idx="0" weight="400.0" />
-		<solve-weight idx="1" weight="0.0" />
-		<solve-weight idx="2" weight="0.0" />
-		<solve-weight idx="3" weight="0.0" />
+		<solve-weight idx="1" weight="000.0" />
+		<solve-weight idx="2" weight="000.0" />
+		<solve-weight idx="3" weight="000.0" />
 	</approach>
 
-	<cruise speed="560" alt="35000" fuel="0.8">
+	<cruise speed="560" alt="40000" fuel="0.8">
 		<control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.95" />
 		<control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.95" />
 		<control-setting axis="/controls/flight/flaps-cmd" value="0.0" />
 		<control-setting axis="/controls/flight/slats-cmd" value="0.0" />
 		<control-setting axis="/fcs/gear-down" value="0.0" />
 		<!-- max payload 26380 (crew + pax + ctr cargo + aft cargo) -->
+		<!-- max cargo 7180 -->
 		<solve-weight idx="0" weight="600.0" />
 		<solve-weight idx="1" weight="18600.0" />
-		<!-- max cargo 7180 -->
 		<solve-weight idx="2" weight="5030.0" />
 		<solve-weight idx="3" weight="2150.0" />
 	</cruise>

@@ -16,6 +16,36 @@
 		<output>/sim/hitches/aerotow/is-slave</output>
 	</logic>
 	<filter>
+		<name>weight-percent-mtow</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<input>
+			<expression>
+				<div>
+					<property>/yasim/gross-weight-lbs</property>
+					<property>/limits/mass-and-balance/maximum-takeoff-mass-lbs</property>
+				</div>		
+			</expression>
+		</input>
+		<output>yasim/weight-percent-mtow</output>
+	</filter>
+	<filter>
+		<name>weight-percent-mlw</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<input>
+			<expression>
+				<div>
+					<property>/yasim/gross-weight-lbs</property>
+					<property>/limits/mass-and-balance/maximum-landing-mass-lbs</property>
+				</div>		
+			</expression>
+		</input>
+		<output>yasim/weight-percent-mlw</output>
+	</filter>
+	<filter>
 		<name>mixt2speedbrake</name>
 		<type>gain</type>
 		<debug type="bool">false</debug>

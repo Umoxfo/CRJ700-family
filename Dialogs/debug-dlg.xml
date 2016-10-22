@@ -149,7 +149,7 @@
 			<text>
 				<label>Mass</label>
 				<property>yasim/gross-weight-lbs</property>
-				<format>%5.1f lbs</format>
+				<format>%5.0f lbs</format>
 				<live>true</live>
 				<color>
 					<red>0.2</red>
@@ -158,6 +158,73 @@
 					<alpha>1</alpha>
 				</color>	
 			</text>	
+			<group>
+				<layout>hbox</layout>
+				<text>
+					<label>TO 0.00</label>
+					<property>yasim/weight-percent-mtow</property>
+					<format>TO %0.2f</format>
+					<live>true</live>
+					<color>
+						<red>0.2</red>
+						<green>0.7</green>
+						<blue>0.9</blue>
+						<alpha>1</alpha>
+					</color>	
+				</text>	
+				<text>
+					<label>L 0.00</label>
+					<property>yasim/weight-percent-mlw</property>
+					<format>L %0.2f</format>
+					<live>true</live>
+					<color>
+						<red>0.2</red>
+						<green>0.7</green>
+						<blue>0.9</blue>
+						<alpha>1</alpha>
+					</color>	
+				</text>	
+			</group>
+			<group>
+				<layout>hbox</layout>
+				<text>
+					<label>0.00 -</label>
+					<property>limits/mass-and-balance/cg-x-min</property>
+					<format>%0.2f &lt;</format>
+					<live>true</live>
+					<color>
+						<red>0.2</red>
+						<green>0.7</green>
+						<blue>0.9</blue>
+						<alpha>1</alpha>
+					</color>	
+				</text>	
+				<text>
+					<label> 0.00 </label>
+					<property>yasim/cg-x</property>
+					<format> %0.2f </format>
+					<live>true</live>
+					<color>
+						<red>0.2</red>
+						<green>0.7</green>
+						<blue>0.9</blue>
+						<alpha>1</alpha>
+					</color>	
+				</text>	
+				<text>
+					<label>- 0.00</label>
+					<property>limits/mass-and-balance/cg-x-max</property>
+					<format>&lt; %0.2f</format>
+					<live>true</live>
+					<color>
+						<red>0.2</red>
+						<green>0.7</green>
+						<blue>0.9</blue>
+						<alpha>1</alpha>
+					</color>	
+				</text>	
+			</group>
+			
 		</group>
 
 		<group>
