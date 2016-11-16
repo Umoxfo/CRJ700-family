@@ -4,48 +4,48 @@
 <!-- Flight deck, all variants -->
 
 <PropertyList>
-	
-    <path>CRJ700-flightdeck.ac</path>
-	
-    <panel-marking-emit>
+
+	<path>CRJ700-flightdeck.ac</path>
+
+	<panel-marking-emit>
 		<red>1</red>
 		<green>0.871</green>
 		<blue>0.427</blue>
 	</panel-marking-emit>
-	
-    <button-emit-white>
+
+	<button-emit-white>
 		<red>1</red>
 		<green>0.871</green>
 		<blue>0.6</blue>
 	</button-emit-white>
-    <button-emit-green>
+	<button-emit-green>
 		<red>0.0</red>
 		<green>1</green>
 		<blue>0.12</blue>
 	</button-emit-green>
-    <button-emit-red>
+	<button-emit-red>
 		<red>1</red>
 		<green>0.0</green>
 		<blue>0.0</blue>
 	</button-emit-red>
-    <button-emit-amber>
+	<button-emit-amber>
 		<red>1.0</red>
 		<green>0.304</green>
 		<blue>0.0</blue>
 	</button-emit-amber>
-    <button-translate-m type="float">0.001</button-translate-m>
-    <cover-rotate-deg type="float">110</cover-rotate-deg>
-    <switch-rotate-deg type="float">35</switch-rotate-deg>
-    <switch-rotate-neg-deg type="float">-35</switch-rotate-neg-deg>
-	
-    <animation>
+	<button-translate-m type="float">0.001</button-translate-m>
+	<cover-rotate-deg type="float">110</cover-rotate-deg>
+	<switch-rotate-deg type="float">35</switch-rotate-deg>
+	<switch-rotate-neg-deg type="float">-35</switch-rotate-neg-deg>
+
+	<animation>
 		<type>range</type>
 		<min-m>0</min-m>
 		<max-m>50</max-m>
 	</animation>
-	
-    <!-- Pilot-side instruments -->
-    <model>
+
+	<!-- Pilot-side instruments -->
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/PFD/pfd.xml</path>
 		<overlay>
 			<params>
@@ -67,15 +67,16 @@
 				<x-m>-1.896</x-m>
 				<y-m>-0.518</y-m>
 			<z-m>0.835</z-m>-->
-			
+
 			<x-m>-1.9025</x-m>
 			<y-m>-0.51396</y-m>
 			<z-m>0.87135</z-m>
 			<pitch-deg>-10</pitch-deg>
 		</offsets>
 	</model>
-    <model>
-		<path>Aircraft/CRJ700-family/Models/Instruments/MFD/mfd.xml</path>
+	<model>
+		<path>Aircraft/CRJ700-family/Models/Instruments/MFD/ND_L.xml</path>
+		<!--
 		<overlay>
 			<params>
 				<powerN>/systems/DC/outputs/mfd1</powerN>
@@ -88,6 +89,7 @@
 				<lightmap-texture-path>Aircraft/CRJ700-family/Models/Effects/Lightmaps/mfd-left-lightmap.png</lightmap-texture-path>
 			</params>
 		</overlay>
+		-->
 		<offsets>
 			<!--
 				<x-m>-1.896</x-m>
@@ -96,11 +98,11 @@
 			-->
 			<x-m>-1.9025</x-m>
 			<y-m>-0.34116</y-m>
-			<z-m>0.87135</z-m>		
+			<z-m>0.87135</z-m>
 			<pitch-deg>-10</pitch-deg>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/EICAS/eicas.xml</path>
 		<overlay>
 			<params>
@@ -115,7 +117,7 @@
 			<pitch-deg>-10</pitch-deg>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/Clock/clock.xml</path>
 		<overlay>
 			<params>
@@ -130,7 +132,7 @@
 			<heading-deg>30</heading-deg>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/SidePanel1/sidepanel.xml</path>
 		<overlay>
 			<params>
@@ -149,7 +151,7 @@
 			<heading-deg>30</heading-deg>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/SidePanel2/sidepanel.xml</path>
 		<overlay>
 			<params>
@@ -165,7 +167,7 @@
 			<heading-deg>30</heading-deg>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/SidePanel2/nws.xml</path>
 		<overlay>
 			<params>
@@ -179,7 +181,7 @@
 			<heading-deg>30</heading-deg>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/CDU/cdu.xml</path>
 		<overlay>
 			<params>
@@ -194,7 +196,7 @@
 			<pitch-deg>-50</pitch-deg>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/RadioPanel/radiopanel-left.xml</path>
 		<offsets>
 			<x-m>-1.311</x-m>
@@ -203,9 +205,9 @@
 			<pitch-deg>-64.5</pitch-deg>
 		</offsets>
 	</model>
-	
-    <!-- Shared instruments -->
-    <model>
+
+	<!-- Shared instruments -->
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/MCP/mcp.xml</path>
 		<overlay>
 			<params>
@@ -232,7 +234,7 @@
 			<pitch-deg>65</pitch-deg>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/UpperPanel/uppanel.xml</path>
 		<overlay>
 			<params>
@@ -245,7 +247,7 @@
 			<z-m>1.5</z-m>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/Standby/standby.xml</path>
 		<overlay>
 			<params>
@@ -265,9 +267,9 @@
 			<pitch-deg>-10</pitch-deg>
 		</offsets>
 	</model>
-	
-    <!-- Copilot-side instruments -->
-    <model>
+
+	<!-- Copilot-side instruments -->
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/PFD/pfd.xml</path>
 		<overlay>
 			<params>
@@ -291,7 +293,7 @@
 			<pitch-deg>-10</pitch-deg>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/MFD/mfd.xml</path>
 		<overlay>
 			<params>
@@ -312,7 +314,7 @@
 			<pitch-deg>-10</pitch-deg>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/EICAS/eicas.xml</path>
 		<overlay>
 			<params>
@@ -328,7 +330,7 @@
 			<pitch-deg>-10</pitch-deg>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/Clock/clock.xml</path>
 		<overlay>
 			<params>
@@ -343,7 +345,7 @@
 			<heading-deg>-30</heading-deg>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/SidePanel1/sidepanel.xml</path>
 		<overlay>
 			<params>
@@ -362,7 +364,7 @@
 			<heading-deg>-30</heading-deg>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/SidePanel2/sidepanel.xml</path>
 		<overlay>
 			<params>
@@ -378,7 +380,7 @@
 			<heading-deg>-30</heading-deg>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/CDU/cdu.xml</path>
 		<overlay>
 			<params>
@@ -393,7 +395,7 @@
 			<pitch-deg>-50</pitch-deg>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<path>Aircraft/CRJ700-family/Models/Instruments/RadioPanel/radiopanel-right.xml</path>
 		<offsets>
 			<x-m>-1.311</x-m>
@@ -402,9 +404,9 @@
 			<pitch-deg>-64.5</pitch-deg>
 		</offsets>
 	</model>
-	
-    <!-- Generic pilot models -->
-    <model>
+
+	<!-- Generic pilot models -->
+	<model>
 		<name>Captain</name>
 		<path>Aircraft/Generic/Pilot/Airliner/pilot.xml</path>
 		<overlay>
@@ -426,7 +428,7 @@
 			<z-m>0.752</z-m>
 		</offsets>
 	</model>
-    <model>
+	<model>
 		<name>First officer</name>
 		<path>Aircraft/Generic/Pilot/Airliner/pilot.xml</path>
 		<overlay>
@@ -448,17 +450,17 @@
 			<z-m>0.752</z-m>
 		</offsets>
 	</model>
-	
-    <!-- "Virtual cockpit" 2d panel/3d panel toggle -->
-    <animation>
+
+	<!-- "Virtual cockpit" 2d panel/3d panel toggle -->
+	<animation>
 		<type>select</type>
 		<condition>
 			<property>sim/virtual-cockpit</property>
 		</condition>
 	</animation>
-	
+
 	<!-- all objects that do emit normally and should be excluded from dome light animation -->
-    <animation>
+	<animation>
 		<name>FlightdeckElementsEmit</name>
 		<object-name>AftCargoExtinLight</object-name>
 		<object-name>APRollSelL</object-name>
@@ -612,8 +614,8 @@
 		<object-name>YawDamperDisc</object-name>
 		<object-name>YokeFloorBases</object-name>
 	</animation>
-	
-    <animation>
+
+	<animation>
 		<type>material</type>
 		<object-name>FlightdeckElements</object-name>
 		<object-name>OHPElements</object-name>
@@ -628,7 +630,7 @@
 		<object-name>Sidepanel2Elements</object-name>
 		<object-name>StandbyElements</object-name>
 		<object-name>UpperPanelElements</object-name>
-		
+
 		<condition>
 			<!-- powered by battery direct bus -->
 			<property>controls/lighting/dome</property>
@@ -639,8 +641,8 @@
 			<blue>0.14</blue>
 		</emission>
 	</animation>
-	
-    <animation>
+
+	<animation>
 		<type>material</type>
 		<object-name>PedestalMarkings</object-name>
 		<condition>
@@ -656,10 +658,10 @@
 			<factor-prop>controls/lighting/panel-norm</factor-prop>
 		</emission>
 	</animation>
-	
-	
-    <!-- Registration text -->
-    <text>
+
+
+	<!-- Registration text -->
+	<text>
 		<name>Left registration</name>
 		<type>string-value</type>
 		<property>sim/model/livery/registration</property>
@@ -680,7 +682,7 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-    <text>
+	<text>
 		<name>Right registration</name>
 		<type>string-value</type>
 		<property>sim/model/livery/registration</property>
@@ -701,7 +703,7 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>Left registration</object-name>
 		<object-name>Right registration</object-name>
@@ -716,11 +718,11 @@
 			<blue>1</blue>
 		</diffuse>
 	</animation>
-	
-    <!-- Not implemented -->
-	
-    <!-- Wiper blades -->
-    <animation>
+
+	<!-- Not implemented -->
+
+	<!-- Wiper blades -->
+	<animation>
 		<type>rotate</type>
 		<object-name>LeftWiper</object-name>
 		<object-name>LeftWiperBlade</object-name>
@@ -735,7 +737,7 @@
 			<z2-m>1.054</z2-m>
 		</axis>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>LeftWiperBlade</object-name>
 		<property>surface-positions/left-wiper-pos-norm</property>
@@ -749,7 +751,7 @@
 			<z2-m>1.202</z2-m>
 		</axis>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>RightWiper</object-name>
 		<object-name>RightWiperBlade</object-name>
@@ -764,7 +766,7 @@
 			<z2-m>1.073</z2-m>
 		</axis>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>RightWiperBlade</object-name>
 		<property>surface-positions/right-wiper-pos-norm</property>
@@ -778,9 +780,9 @@
 			<z2-m>1.202</z2-m>
 		</axis>
 	</animation>
-	
-    <!-- Yokes -->
-    <animation>
+
+	<!-- Yokes -->
+	<animation>
 		<type>pick</type>
 		<object-name>LeftYokeAP</object-name>
 		<object-name>RightYokeAP</object-name>
@@ -794,7 +796,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>LeftYokeChecklist</object-name>
 		<object-name>RightYokeChecklist</object-name>
@@ -809,7 +811,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>LeftYoke</object-name>
 		<object-name>RightYoke</object-name>
@@ -825,7 +827,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>select</type>
 		<object-name>LeftYoke</object-name>
 		<object-name>LeftYokeAP</object-name>
@@ -839,7 +841,7 @@
 			<property>sim/model/yokes</property>
 		</condition>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>LeftYoke</object-name>
 		<object-name>LeftYokeAP</object-name>
@@ -857,7 +859,7 @@
 			<z-m>0.906</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>RightYoke</object-name>
 		<object-name>RightYokeAP</object-name>
@@ -875,7 +877,7 @@
 			<z-m>0.906</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>LeftYoke</object-name>
 		<object-name>LeftYokeAP</object-name>
@@ -894,7 +896,7 @@
 			<z-m>0.117</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>RightYoke</object-name>
 		<object-name>RightYokeAP</object-name>
@@ -913,9 +915,9 @@
 			<z-m>0.117</z-m>
 		</center>
 	</animation>
-	
-    <!-- Glareshield warning lights -->
-    <animation>
+
+	<!-- Glareshield warning lights -->
+	<animation>
 		<type>pick</type>
 		<object-name>APRollSelL</object-name>
 		<object-name>PltRoll</object-name>
@@ -928,15 +930,15 @@
 			</binding>
 			<binding>
 				<condition>
-					<property>controls/ailerons/plt-roll</property>				
+					<property>controls/ailerons/plt-roll</property>
 				</condition>
 				<command>property-assign</command>
 				<property>controls/ailerons/cplt-roll</property>
 				<value>false</value>
 			</binding>
-		</action>    
+		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>APRollSelR</object-name>
 		<object-name>CpltRoll</object-name>
@@ -949,16 +951,16 @@
 			</binding>
 			<binding>
 				<condition>
-					<property>controls/ailerons/cplt-roll</property>				
+					<property>controls/ailerons/cplt-roll</property>
 				</condition>
 				<command>property-assign</command>
 				<property>controls/ailerons/plt-roll</property>
 				<value>false</value>
 			</binding>
-		</action>    
+		</action>
 	</animation>
-	
-    <animation>
+
+	<animation>
 		<type>material</type>
 		<object-name>APRollSelL</object-name>
 		<object-name>APRollSelR</object-name>
@@ -974,20 +976,20 @@
 				</or>
 			</and>
 		</condition>
-		<diffuse>	
+		<diffuse>
 			<red alias="../../../button-emit-amber/red" />
 			<green alias="../../../button-emit-amber/green" />
 			<blue alias="../../../button-emit-amber/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</diffuse>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-amber/red" />
 			<green alias="../../../button-emit-amber/green" />
 			<blue alias="../../../button-emit-amber/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>PltRoll</object-name>
 		<condition>
@@ -1002,20 +1004,20 @@
 				</or>
 			</and>
 		</condition>
-		<diffuse>	
+		<diffuse>
 			<red alias="../../../button-emit-green/red" />
 			<green alias="../../../button-emit-green/green" />
 			<blue alias="../../../button-emit-green/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</diffuse>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-green/red" />
 			<green alias="../../../button-emit-green/green" />
 			<blue alias="../../../button-emit-green/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>CpltRoll</object-name>
 		<condition>
@@ -1030,13 +1032,13 @@
 				</or>
 			</and>
 		</condition>
-		<diffuse>	
+		<diffuse>
 			<red alias="../../../button-emit-green/red" />
 			<green alias="../../../button-emit-green/green" />
 			<blue alias="../../../button-emit-green/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</diffuse>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-green/red" />
 			<green alias="../../../button-emit-green/green" />
 			<blue alias="../../../button-emit-green/blue" />
@@ -1044,7 +1046,7 @@
 		</emission>
 	</animation>
 	<!-- master warning -->
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>MasterWarningLt</object-name>
 		<condition>
@@ -1059,20 +1061,20 @@
 				</or>
 			</and>
 		</condition>
-		<diffuse>	
+		<diffuse>
 			<red alias="../../../button-emit-red/red" />
 			<green alias="../../../button-emit-red/green" />
 			<blue alias="../../../button-emit-red/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</diffuse>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-red/red" />
 			<green alias="../../../button-emit-red/green" />
 			<blue alias="../../../button-emit-red/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>MasterCautionLt</object-name>
 		<condition>
@@ -1087,20 +1089,20 @@
 				</or>
 			</and>
 		</condition>
-		<diffuse>	
+		<diffuse>
 			<red alias="../../../button-emit-amber/red" />
 			<green alias="../../../button-emit-amber/green" />
 			<blue alias="../../../button-emit-amber/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</diffuse>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-amber/red" />
 			<green alias="../../../button-emit-amber/green" />
 			<blue alias="../../../button-emit-amber/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>StallLt</object-name>
 		<condition>
@@ -1115,22 +1117,22 @@
 				</or>
 			</and>
 		</condition>
-		<diffuse>	
+		<diffuse>
 			<red alias="../../../button-emit-red/red" />
 			<green alias="../../../button-emit-red/green" />
 			<blue alias="../../../button-emit-red/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</diffuse>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-red/red" />
 			<green alias="../../../button-emit-red/green" />
 			<blue alias="../../../button-emit-red/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-	
+
 	<!-- GPWS -->
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>GPWS1Lt</object-name>
 		<condition>
@@ -1145,14 +1147,14 @@
 				</or>
 			</and>
 		</condition>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-red/red" />
 			<green alias="../../../button-emit-red/green" />
 			<blue alias="../../../button-emit-red/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>GPWS2Lt</object-name>
 		<condition>
@@ -1167,14 +1169,14 @@
 				</or>
 			</and>
 		</condition>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-amber/red" />
 			<green alias="../../../button-emit-amber/green" />
 			<blue alias="../../../button-emit-amber/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>Eng1FireLtCover</object-name>
 		<action>
@@ -1186,7 +1188,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>Eng1FireLtCover</object-name>
 		<property>controls/engines/engine[0]/fire-bottle-discharge-cover</property>
@@ -1202,7 +1204,7 @@
 			<z-m>1.199</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>Eng1FireLt</object-name>
 		<condition>
@@ -1217,7 +1219,7 @@
 				</or>
 			</and>
 		</condition>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-red/red" />
 			<green alias="../../../button-emit-red/green" />
 			<blue alias="../../../button-emit-red/blue" />
@@ -1240,7 +1242,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>Eng1ExtinLt</object-name>
 		<condition>
@@ -1255,14 +1257,14 @@
 				</or>
 			</and>
 		</condition>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-green/red" />
 			<green alias="../../../button-emit-green/green" />
 			<blue alias="../../../button-emit-green/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>Eng1ExtinLt</object-name>
 		<action>
@@ -1279,7 +1281,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>APUFireLtCover</object-name>
 		<action>
@@ -1291,7 +1293,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>APUFireLtCover</object-name>
 		<property>controls/APU/fire-switch-cover</property>
@@ -1307,7 +1309,7 @@
 			<z-m>1.195</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>APUFireLt</object-name>
 		<condition>
@@ -1345,7 +1347,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>APUExtinLt</object-name>
 		<condition>
@@ -1384,7 +1386,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>Eng2FireLtCover</object-name>
 		<action>
@@ -1396,7 +1398,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>Eng2FireLtCover</object-name>
 		<property>controls/engines/engine[1]/fire-bottle-discharge-cover</property>
@@ -1412,7 +1414,7 @@
 			<z-m>1.199</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>Eng2FireLt</object-name>
 		<condition>
@@ -1434,7 +1436,7 @@
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>Eng2FireLt</object-name>
 		<action>
@@ -1450,7 +1452,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>Eng2ExtinLt</object-name>
 		<condition>
@@ -1472,7 +1474,7 @@
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>Eng2ExtinLt</object-name>
 		<action>
@@ -1489,9 +1491,9 @@
 			</binding>
 		</action>
 	</animation>
-	
-    <!-- Pedals -->
-    <animation>
+
+	<!-- Pedals -->
+	<animation>
 		<type>translate</type>
 		<object-name>LeftLeftPedal</object-name>
 		<property>controls/flight/rudder</property>
@@ -1502,7 +1504,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-    <animation>
+	<animation>
 		<type>translate</type>
 		<object-name>LeftRightPedal</object-name>
 		<property>controls/flight/rudder</property>
@@ -1513,7 +1515,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-    <animation>
+	<animation>
 		<type>translate</type>
 		<object-name>RightLeftPedal</object-name>
 		<property>fcs/copilot/rudder-cmd-norm</property>
@@ -1524,7 +1526,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-    <animation>
+	<animation>
 		<type>translate</type>
 		<object-name>RightRightPedal</object-name>
 		<property>fcs/copilot/rudder-cmd-norm</property>
@@ -1535,9 +1537,9 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
-    <!-- Tiller -->
-    <animation>
+
+	<!-- Tiller -->
+	<animation>
 		<type>pick</type>
 		<object-name>Tiller</object-name>
 		<action>
@@ -1580,7 +1582,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>Tiller</object-name>
 		<property>controls/gear/tiller-steer-deg</property>
@@ -1595,9 +1597,9 @@
 			<z-m>0</z-m>
 		</center>
 	</animation>
-	
-    <!-- Gear lever -->
-    <animation>
+
+	<!-- Gear lever -->
+	<animation>
 		<type>pick</type>
 		<object-name>MuteHornCover</object-name>
 		<action>
@@ -1609,7 +1611,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>MuteHornCover</object-name>
 		<property>controls/switches/mute-horn-cover</property>
@@ -1625,8 +1627,8 @@
 			<z-m>0.74718</z-m>
 		</center>
 	</animation>
-	
-    <animation>
+
+	<animation>
 		<type>pick</type>
 		<object-name>MuteHornBtn</object-name>
 		<object-name>MuteHornLight</object-name>
@@ -1639,7 +1641,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>translate</type>
 		<object-name>MuteHornBtn</object-name>
 		<object-name>MuteHornLight</object-name>
@@ -1651,7 +1653,7 @@
 			<z>-0.839099631</z>
 		</axis>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>MuteHornLight</object-name>
 		<condition>
@@ -1666,16 +1668,16 @@
 				</or>
 			</and>
 		</condition>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-white/red" />
 			<green alias="../../../button-emit-white/green" />
 			<blue alias="../../../button-emit-white/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-	
-	
-    <animation>
+
+
+	<animation>
 		<type>pick</type>
 		<object-name>GearLever_0</object-name>
 		<object-name>GearLever_1</object-name>
@@ -1688,7 +1690,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>GearLever_0</object-name>
 		<object-name>GearLever_1</object-name>
@@ -1705,8 +1707,8 @@
 			<z-m>0.674</z-m>
 		</center>
 	</animation>
-    <!-- engine high power - not implemented, almost never used in real live -->
-    <animation>
+	<!-- engine high power - not implemented, almost never used in real live -->
+	<animation>
 		<type>pick</type>
 		<object-name>EngHighPwrCover</object-name>
 		<action>
@@ -1718,7 +1720,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>EngHighPwrCover</object-name>
 		<property>controls/switches/eng-high-power-cover</property>
@@ -1734,8 +1736,8 @@
 			<z-m>0.64082</z-m>
 		</center>
 	</animation>
-    
-    <animation>
+
+	<animation>
 		<type>material</type>
 		<object-name>EngHighPwrLight</object-name>
 		<condition>
@@ -1749,16 +1751,16 @@
 				</or>
 			</and>
 		</condition>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-white/red" />
 			<green alias="../../../button-emit-white/green" />
 			<blue alias="../../../button-emit-white/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-	
+
 	<!-- Light test switch -->
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>LtTest</object-name>
 		<action>
@@ -1770,7 +1772,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>LtTest</object-name>
 		<property>controls/lighting/lt-test</property>
@@ -1786,9 +1788,9 @@
 			<z-m>0.639</z-m>
 		</center>
 	</animation>
-	
+
 	<!-- Ind light switch -->
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>IndLts</object-name>
 		<action>
@@ -1806,7 +1808,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>IndLts</object-name>
 		<property>controls/lighting/ind-lts-dim</property>
@@ -1823,9 +1825,9 @@
 			<z-m>0.614</z-m>
 		</center>
 	</animation>
-	
-    <!-- GPWS overrides -->
-    <animation>
+
+	<!-- GPWS overrides -->
+	<animation>
 		<type>pick</type>
 		<object-name>GPWSTerrainCover</object-name>
 		<action>
@@ -1837,7 +1839,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>GPWSTerrainCover</object-name>
 		<property>controls/switches/gpws-terrain-cover</property>
@@ -1853,7 +1855,7 @@
 			<z-m>0.58852</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>GPWSFlapCover</object-name>
 		<action>
@@ -1865,7 +1867,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>GPWSFlapCover</object-name>
 		<property>controls/switches/gpws-flaps-cover</property>
@@ -1881,8 +1883,8 @@
 			<z-m>0.58852</z-m>
 		</center>
 	</animation>
-	
-    <animation>
+
+	<animation>
 		<type>pick</type>
 		<object-name>GPWSTerrainBtn</object-name>
 		<object-name>GPWSTerrainLight</object-name>
@@ -1895,7 +1897,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>translate</type>
 		<object-name>GPWSTerrainBtn</object-name>
 		<object-name>GPWSTerrainLight</object-name>
@@ -1907,7 +1909,7 @@
 			<z>-0.839099631</z>
 		</axis>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>GPWSTerrainLight</object-name>
 		<condition>
@@ -1922,15 +1924,15 @@
 				</or>
 			</and>
 		</condition>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-white/red" />
 			<green alias="../../../button-emit-white/green" />
 			<blue alias="../../../button-emit-white/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-	
-    <animation>
+
+	<animation>
 		<type>pick</type>
 		<object-name>GPWSFlapBtn</object-name>
 		<object-name>GPWSFlapLight</object-name>
@@ -1943,7 +1945,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>translate</type>
 		<object-name>GPWSFlapBtn</object-name>
 		<object-name>GPWSFlapLight</object-name>
@@ -1955,7 +1957,7 @@
 			<z>-0.839099631</z>
 		</axis>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>GPWSFlapLight</object-name>
 		<condition>
@@ -1970,16 +1972,16 @@
 				</or>
 			</and>
 		</condition>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-white/red" />
 			<green alias="../../../button-emit-white/green" />
 			<blue alias="../../../button-emit-white/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-	
-    <!-- Spoilers/thrust reversers -->
-    <animation>
+
+	<!-- Spoilers/thrust reversers -->
+	<animation>
 		<type>pick</type>
 		<object-name>GroundSpoilerArm</object-name>
 		<action>
@@ -2003,7 +2005,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>GroundSpoilerArm</object-name>
 		<property>controls/flight/ground-lift-dump</property>
@@ -2020,7 +2022,7 @@
 			<z-m>0.572</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>Eng1ReverserArm</object-name>
 		<action>
@@ -2032,7 +2034,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>Eng1ReverserArm</object-name>
 		<property>controls/engines/engine[0]/reverser-armed</property>
@@ -2048,7 +2050,7 @@
 			<z-m>0.572</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>Eng2ReverserArm</object-name>
 		<action>
@@ -2060,7 +2062,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>Eng2ReverserArm</object-name>
 		<property>controls/engines/engine[1]/reverser-armed</property>
@@ -2076,9 +2078,9 @@
 			<z-m>0.572</z-m>
 		</center>
 	</animation>
-	
-    <!-- Speedbrake lever -->
-    <animation>
+
+	<!-- Speedbrake lever -->
+	<animation>
 		<type>pick</type>
 		<object-name>SpeedbrakeLever</object-name>
 		<action>
@@ -2102,16 +2104,31 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>SpeedbrakeLever</object-name>
 		<property>controls/flight/speedbrake</property>
 		<interpolation>
-			<entry><ind>0</ind><dep>-43</dep></entry>
-			<entry><ind>0.25</ind><dep>-23</dep></entry>
-			<entry><ind>0.5</ind><dep>1.5</dep></entry>
-			<entry><ind>0.75</ind><dep>22.5</dep></entry>
-			<entry><ind>1</ind><dep>45</dep></entry>
+			<entry>
+				<ind>0</ind>
+				<dep>-43</dep>
+			</entry>
+			<entry>
+				<ind>0.25</ind>
+				<dep>-23</dep>
+			</entry>
+			<entry>
+				<ind>0.5</ind>
+				<dep>1.5</dep>
+			</entry>
+			<entry>
+				<ind>0.75</ind>
+				<dep>22.5</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>45</dep>
+			</entry>
 		</interpolation>
 		<axis>
 			<x>0</x>
@@ -2124,9 +2141,9 @@
 			<z-m>0.524</z-m>
 		</center>
 	</animation>
-	
-    <!-- Engine 1 thrust lever -->
-    <animation>
+
+	<!-- Engine 1 thrust lever -->
+	<animation>
 		<type>pick</type>
 		<object-name>Eng1LeverCutoff</object-name>
 		<action>
@@ -2146,7 +2163,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>Eng1ThrustLever</object-name>
 		<action>
@@ -2187,7 +2204,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>Eng1TMLever</object-name>
 		<action>
@@ -2217,14 +2234,14 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>select</type>
 		<object-name>Eng1LeverCutoff</object-name>
 		<condition>
 			<property>controls/engines/engine[0]/cutoff</property>
 		</condition>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>Eng1Reverser</object-name>
 		<action>
@@ -2238,7 +2255,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>select</type>
 		<object-name>Eng1ThrustLever</object-name>
 		<object-name>Eng1Reverser</object-name>
@@ -2254,7 +2271,7 @@
 			</and>
 		</condition>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>Eng1ThrustLever</object-name>
 		<object-name>Eng1Reverser</object-name>
@@ -2277,7 +2294,7 @@
 			<z-m>0.517</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>Eng1Reverser</object-name>
 		<property>controls/engines/engine[0]/throttle</property>
@@ -2296,22 +2313,31 @@
 			<z-m>0.674</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>select</type>
 		<object-name>Eng1TMLever</object-name>
 		<condition>
 			<property>controls/engines/engine[0]/thrust-mode</property>
 		</condition>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>Eng1TMLever</object-name>
 		<property>controls/engines/engine[0]/thrust-mode</property>
 		<interpolation>
-			<entry><ind>1</ind><dep>0</dep></entry>
-			<entry><ind>2</ind><dep>-11</dep></entry>
-			<entry><ind>3</ind><dep>-28</dep></entry>
-		</interpolation>		
+			<entry>
+				<ind>1</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>2</ind>
+				<dep>-11</dep>
+			</entry>
+			<entry>
+				<ind>3</ind>
+				<dep>-28</dep>
+			</entry>
+		</interpolation>
 		<axis>
 			<x>0</x>
 			<y>1</y>
@@ -2323,9 +2349,9 @@
 			<z-m>0.517</z-m>
 		</center>
 	</animation>
-	
-    <!-- Engine 2 thrust lever -->
-    <animation>
+
+	<!-- Engine 2 thrust lever -->
+	<animation>
 		<type>pick</type>
 		<object-name>Eng2LeverCutoff</object-name>
 		<action>
@@ -2346,7 +2372,7 @@
 		</action>
 	</animation>
 
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>Eng2ThrustLever</object-name>
 		<action>
@@ -2387,7 +2413,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>Eng2TMLever</object-name>
 		<action>
@@ -2417,14 +2443,14 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>select</type>
 		<object-name>Eng2LeverCutoff</object-name>
 		<condition>
 			<property>controls/engines/engine[1]/cutoff</property>
 		</condition>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>Eng2Reverser</object-name>
 		<action>
@@ -2438,7 +2464,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>select</type>
 		<object-name>Eng2ThrustLever</object-name>
 		<object-name>Eng2Reverser</object-name>
@@ -2454,7 +2480,7 @@
 			</and>
 		</condition>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>Eng2ThrustLever</object-name>
 		<object-name>Eng2Reverser</object-name>
@@ -2477,7 +2503,7 @@
 			<z-m>0.517</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>Eng2Reverser</object-name>
 		<property>controls/engines/engine[1]/throttle</property>
@@ -2496,22 +2522,31 @@
 			<z-m>0.674</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>select</type>
 		<object-name>Eng2TMLever</object-name>
 		<condition>
 			<property>controls/engines/engine[1]/thrust-mode</property>
 		</condition>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>Eng2TMLever</object-name>
 		<property>controls/engines/engine[1]/thrust-mode</property>
 		<interpolation>
-			<entry><ind>1</ind><dep>0</dep></entry>
-			<entry><ind>2</ind><dep>-11</dep></entry>
-			<entry><ind>3</ind><dep>-28</dep></entry>
-		</interpolation>		
+			<entry>
+				<ind>1</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>2</ind>
+				<dep>-11</dep>
+			</entry>
+			<entry>
+				<ind>3</ind>
+				<dep>-28</dep>
+			</entry>
+		</interpolation>
 		<axis>
 			<x>0</x>
 			<y>1</y>
@@ -2523,9 +2558,9 @@
 			<z-m>0.517</z-m>
 		</center>
 	</animation>
-	
-    <!-- Metric altitude -->
-    <animation>
+
+	<!-- Metric altitude -->
+	<animation>
 		<type>pick</type>
 		<object-name>MetricAltSwitch</object-name>
 		<action>
@@ -2537,7 +2572,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>MetricAltSwitch</object-name>
 		<property>instrumentation/use-metric-altitude</property>
@@ -2554,9 +2589,9 @@
 			<z-m>0.565</z-m>
 		</center>
 	</animation>
-	
-    <!-- Flaps/slats lever -->
-    <animation>
+
+	<!-- Flaps/slats lever -->
+	<animation>
 		<type>pick</type>
 		<object-name>FlapSlatLever</object-name>
 		<action>
@@ -2580,17 +2615,35 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>FlapSlatLever</object-name>
 		<property>controls/flight/flaps</property>
 		<interpolation>
-			<entry><ind>0</ind><dep>-40</dep></entry>
-			<entry><ind>0.022</ind><dep>-26</dep></entry>
-			<entry><ind>0.177</ind><dep>-13</dep></entry>
-			<entry><ind>0.444</ind><dep>4</dep></entry>
-			<entry><ind>0.666</ind><dep>21</dep></entry>
-			<entry><ind>1</ind><dep>38</dep></entry>
+			<entry>
+				<ind>0</ind>
+				<dep>-40</dep>
+			</entry>
+			<entry>
+				<ind>0.022</ind>
+				<dep>-26</dep>
+			</entry>
+			<entry>
+				<ind>0.177</ind>
+				<dep>-13</dep>
+			</entry>
+			<entry>
+				<ind>0.444</ind>
+				<dep>4</dep>
+			</entry>
+			<entry>
+				<ind>0.666</ind>
+				<dep>21</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>38</dep>
+			</entry>
 		</interpolation>
 		<axis>
 			<x>0</x>
@@ -2603,9 +2656,9 @@
 			<z-m>0.556</z-m>
 		</center>
 	</animation>
-	
-    <!-- EICAS controls -->
-    <animation>
+
+	<!-- EICAS controls -->
+	<animation>
 		<type>pick</type>
 		<object-name>EICAS_Pri</object-name>
 		<action>
@@ -2617,13 +2670,15 @@
 				<value>1</value>
 			</binding>
 		</action>
-		<hovered><binding>
-			<command>set-tooltip</command>
-			<tooltip-id>EP_Pri</tooltip-id>
-			<label>EICAS Pri</label>
-		</binding></hovered>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>EP_Pri</tooltip-id>
+				<label>EICAS Pri</label>
+			</binding>
+		</hovered>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>EICAS_Stat</object-name>
 		<action>
@@ -2635,13 +2690,15 @@
 				<value>2</value>
 			</binding>
 		</action>
-		<hovered><binding>
-			<command>set-tooltip</command>
-			<tooltip-id>EP_Stat</tooltip-id>
-			<label>EICAS Status</label>
-		</binding></hovered>		
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>EP_Stat</tooltip-id>
+				<label>EICAS Status</label>
+			</binding>
+		</hovered>
 	</animation>
-    <!--animation>
+	<!--animation>
 		<type>pick</type>
 		<object-name>EICAS_ECS</object-name>
 		<action>
@@ -2657,9 +2714,9 @@
 			<command>set-tooltip</command>
 			<tooltip-id>EP_ECS</tooltip-id>
 			<label>EICAS ECS</label>
-		</binding></hovered>		
+		</binding></hovered>
 	</animation-->
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>EICAS_Hyd</object-name>
 		<action>
@@ -2671,13 +2728,15 @@
 				<value>4</value>
 			</binding>
 		</action>
-		<hovered><binding>
-			<command>set-tooltip</command>
-			<tooltip-id>EP_Hyd</tooltip-id>
-			<label>EICAS Hydraulic</label>
-		</binding></hovered>		
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>EP_Hyd</tooltip-id>
+				<label>EICAS Hydraulic</label>
+			</binding>
+		</hovered>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>EICAS_Elec</object-name>
 		<action>
@@ -2690,11 +2749,13 @@
 				<value>6</value>
 			</binding>
 		</action>
-		<hovered><binding>
-			<command>set-tooltip</command>
-			<tooltip-id>EP_Elec</tooltip-id>
-			<label>EICAS Electrical</label>
-		</binding></hovered>		
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>EP_Elec</tooltip-id>
+				<label>EICAS Electrical</label>
+			</binding>
+		</hovered>
 	</animation>
 	<!--
 	<animation>
@@ -2713,7 +2774,7 @@
 			<command>set-tooltip</command>
 			<tooltip-id>EP_Fuel</tooltip-id>
 			<label>EICAS Fuel</label>
-		</binding></hovered>		
+		</binding></hovered>
 	</animation>
 	<animation>
 		<type>pick</type>
@@ -2731,8 +2792,8 @@
 			<command>set-tooltip</command>
 			<tooltip-id>EP_FCTL</tooltip-id>
 			<label>EICAS Flight Controlls</label>
-		</binding></hovered>		
-	</animation>	
+		</binding></hovered>
+	</animation>
 	<animation>
 		<type>pick</type>
 		<object-name>EICAS_AICE</object-name>
@@ -2749,10 +2810,10 @@
 			<command>set-tooltip</command>
 			<tooltip-id>EP_AICE</tooltip-id>
 			<label>EICAS Anti Ice</label>
-		</binding></hovered>		
+		</binding></hovered>
 	</animation>
-	-->	
-    <animation>
+	-->
+	<animation>
 		<type>pick</type>
 		<object-name>EICAS_Doors</object-name>
 		<action>
@@ -2764,15 +2825,17 @@
 				<value>10</value>
 			</binding>
 		</action>
-		<hovered><binding>
-			<command>set-tooltip</command>
-			<tooltip-id>EP_Doors</tooltip-id>
-			<label>EICAS Doors</label>
-		</binding></hovered>		
-	</animation>	
-	
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>EP_Doors</tooltip-id>
+				<label>EICAS Doors</label>
+			</binding>
+		</hovered>
+	</animation>
+
 	<!-- Aileron/rudder trim -->
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>AileronTrimKnob</object-name>
 		<action>
@@ -2798,7 +2861,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>AileronTrimKnob</object-name>
 		<property>controls/flight/aileron-trim</property>
@@ -2814,7 +2877,7 @@
 			<z-m>0.52276</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>RudderTrimKnob</object-name>
 		<action>
@@ -2840,7 +2903,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>RudderTrimKnob</object-name>
 		<property>controls/flight/rudder-trim</property>
@@ -2856,9 +2919,9 @@
 			<z-m>0.52276</z-m>
 		</center>
 	</animation>
-	
-    <!-- Lighting -->
-    <animation>
+
+	<!-- Lighting -->
+	<animation>
 		<type>pick</type>
 		<object-name>DisplayLights</object-name>
 		<action>
@@ -2884,7 +2947,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>DisplayLights</object-name>
 		<property>controls/lighting/display-norm</property>
@@ -2901,7 +2964,7 @@
 			<z-m>0.50575</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>PanelLights</object-name>
 		<action>
@@ -2927,7 +2990,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>PanelLights</object-name>
 		<property>controls/lighting/panel-norm</property>
@@ -2944,7 +3007,7 @@
 			<z-m>0.50575</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>FloodLights</object-name>
 		<action>
@@ -2970,7 +3033,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>FloodLights</object-name>
 		<property>controls/lighting/panel-flood-norm</property>
@@ -2987,9 +3050,9 @@
 			<z-m>0.50575</z-m>
 		</center>
 	</animation>
-	
-    <!-- Yaw dampers -->
-    <animation>
+
+	<!-- Yaw dampers -->
+	<animation>
 		<type>pick</type>
 		<object-name>YawDamperDisc</object-name>
 		<action>
@@ -3007,7 +3070,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>YawDamper1Btn</object-name>
 		<object-name>YawDamper1Face</object-name>
@@ -3020,7 +3083,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>translate</type>
 		<object-name>YawDamper1Btn</object-name>
 		<object-name>YawDamper1Face</object-name>
@@ -3032,7 +3095,7 @@
 			<z>-1</z>
 		</axis>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>YawDamper1Face</object-name>
 		<condition>
@@ -3047,14 +3110,14 @@
 				</or>
 			</and>
 		</condition>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-white/red" />
 			<green alias="../../../button-emit-white/green" />
 			<blue alias="../../../button-emit-white/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>YawDamper2Btn</object-name>
 		<object-name>YawDamper2Face</object-name>
@@ -3067,7 +3130,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>translate</type>
 		<object-name>YawDamper2Btn</object-name>
 		<object-name>YawDamper2Face</object-name>
@@ -3079,7 +3142,7 @@
 			<z>-1</z>
 		</axis>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>YawDamper2Face</object-name>
 		<condition>
@@ -3094,16 +3157,16 @@
 				</or>
 			</and>
 		</condition>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-white/red" />
 			<green alias="../../../button-emit-white/green" />
 			<blue alias="../../../button-emit-white/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-	
+
 	<!-- trim -->
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>StabTrim1Face</object-name>
 		<object-name>StabTrim2Face</object-name>
@@ -3112,20 +3175,20 @@
 				<greater-than-equals>
 					<property>systems/DC/outputs/efis</property>
 					<value>15</value>
-				</greater-than-equals>			
+				</greater-than-equals>
 				<or>
 					<property>controls/lighting/lt-test</property>
 				</or>
 			</and>
 		</condition>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-white/red" />
 			<green alias="../../../button-emit-white/green" />
 			<blue alias="../../../button-emit-white/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>MachTrimLight</object-name>
 		<condition>
@@ -3139,16 +3202,16 @@
 				</or>
 			</and>
 		</condition>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-amber/red" />
 			<green alias="../../../button-emit-amber/green" />
 			<blue alias="../../../button-emit-amber/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-	
+
 	<!-- cargo fire ex -->
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>FwdCargoCover</object-name>
 		<action>
@@ -3160,7 +3223,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>FwdCargoCover</object-name>
 		<property>controls/switches/fwd-cargo-cover</property>
@@ -3176,7 +3239,7 @@
 			<z-m>0.44393</z-m>
 		</center>
 	</animation>
-    <animation>
+	<animation>
 		<type>pick</type>
 		<object-name>AftCargoCover</object-name>
 		<action>
@@ -3188,7 +3251,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>AftCargoCover</object-name>
 		<property>controls/switches/aft-cargo-cover</property>
@@ -3204,8 +3267,8 @@
 			<z-m>0.42766	</z-m>
 		</center>
 	</animation>
-	
-    <animation>
+
+	<animation>
 		<type>pick</type>
 		<object-name>FwdCargoExtinBtn</object-name>
 		<object-name>FwdCargoExtinLight</object-name>
@@ -3218,7 +3281,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>translate</type>
 		<object-name>FwdCargoExtinBtn</object-name>
 		<object-name>FwdCargoExtinLight</object-name>
@@ -3230,7 +3293,7 @@
 			<z>-0.839099631</z>
 		</axis>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>FwdCargoExtinLight</object-name>
 		<condition>
@@ -3245,15 +3308,15 @@
 				</or>
 			</and>
 		</condition>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-red/red" />
 			<green alias="../../../button-emit-red/green" />
 			<blue alias="../../../button-emit-red/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-	
-    <animation>
+
+	<animation>
 		<type>pick</type>
 		<object-name>AftCargoExtinBtn</object-name>
 		<object-name>AftCargoExtinLight</object-name>
@@ -3266,7 +3329,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>translate</type>
 		<object-name>AftCargoExtinBtn</object-name>
 		<object-name>AftCargoExtinLight</object-name>
@@ -3278,7 +3341,7 @@
 			<z>-0.839099631</z>
 		</axis>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>AftCargoExtinLight</object-name>
 		<condition>
@@ -3293,15 +3356,15 @@
 				</or>
 			</and>
 		</condition>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-red/red" />
 			<green alias="../../../button-emit-red/green" />
 			<blue alias="../../../button-emit-red/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
 	</animation>
-	
-    <animation>
+
+	<animation>
 		<type>pick</type>
 		<object-name>CargoFirexBtn</object-name>
 		<object-name>CargoFirexLight</object-name>
@@ -3314,7 +3377,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>translate</type>
 		<object-name>CargoFirexBtn</object-name>
 		<object-name>CargoFirexLight</object-name>
@@ -3326,7 +3389,7 @@
 			<z>-0.839099631</z>
 		</axis>
 	</animation>
-    <animation>
+	<animation>
 		<type>material</type>
 		<object-name>CargoFirexLight</object-name>
 		<condition>
@@ -3344,15 +3407,15 @@
 				</or>
 			</and>
 		</condition>
-		<emission>	
+		<emission>
 			<red alias="../../../button-emit-green/red" />
 			<green alias="../../../button-emit-green/green" />
 			<blue alias="../../../button-emit-green/blue" />
 			<factor-prop>controls/lighting/ind-lts-norm</factor-prop>
 		</emission>
-	</animation>	
-    <!-- Cabin alerts -->
-    <animation>
+	</animation>
+	<!-- Cabin alerts -->
+	<animation>
 		<type>pick</type>
 		<object-name>Call</object-name>
 		<object-name>Chime</object-name>
@@ -3367,8 +3430,8 @@
 			</binding>
 		</action>
 	</animation>
-    <!-- ADG manual deploy -->
-    <animation>
+	<!-- ADG manual deploy -->
+	<animation>
 		<type>pick</type>
 		<object-name>ADGManDeploy</object-name>
 		<action>
@@ -3381,8 +3444,8 @@
 			</binding>
 		</action>
 	</animation>
-    <!-- Emer Flaps -->
-    <animation>
+	<!-- Emer Flaps -->
+	<animation>
 		<type>pick</type>
 		<object-name>EmerFlaps</object-name>
 		<action>
@@ -3394,7 +3457,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>EmerFlaps</object-name>
 		<property>controls/emer-flaps</property>
@@ -3410,9 +3473,9 @@
 			<z-m>0.40654</z-m>
 		</center>
 	</animation>
-	
-    <!-- Door -->
-    <animation>
+
+	<!-- Door -->
+	<animation>
 		<type>pick</type>
 		<object-name>Door</object-name>
 		<action>
@@ -3426,7 +3489,7 @@
 			</binding>
 		</action>
 	</animation>
-    <animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>Door</object-name>
 		<property>sim/model/door-positions/flight-deck/position-norm</property>
@@ -3442,9 +3505,9 @@
 			<z-m>0</z-m>
 		</center>
 	</animation>
-	
-    <!-- Lightmaps -->
-    <effect>
+
+	<!-- Lightmaps -->
+	<effect>
 		<inherits-from>Aircraft/CRJ700-family/Models/Effects/CRJ700lightmap</inherits-from>
 		<parameters>
 			<lightmap-factor-prop>sim/model/lights/panel-lightmap</lightmap-factor-prop>
@@ -3463,7 +3526,7 @@
 		</parameters>
 		<object-name>MainPanel</object-name>
 	</effect>
-    <effect>
+	<effect>
 		<inherits-from>Aircraft/CRJ700-family/Models/Effects/CRJ700lightmap</inherits-from>
 		<parameters>
 			<lightmap-factor-prop>sim/model/lights/panel-lightmap</lightmap-factor-prop>
@@ -3482,7 +3545,7 @@
 		</parameters>
 		<object-name>PedestalTop</object-name>
 	</effect>
-    <effect>
+	<effect>
 		<inherits-from>Aircraft/CRJ700-family/Models/Effects/CRJ700lightmap</inherits-from>
 		<parameters>
 			<lightmap-factor-prop>sim/model/lights/panel-lightmap</lightmap-factor-prop>
@@ -3501,7 +3564,7 @@
 		</parameters>
 		<object-name>LeftASIPlacard</object-name>
 	</effect>
-    <effect>
+	<effect>
 		<inherits-from>Aircraft/CRJ700-family/Models/Effects/CRJ700lightmap</inherits-from>
 		<parameters>
 			<lightmap-factor-prop>sim/model/lights/panel-lightmap</lightmap-factor-prop>
@@ -3520,7 +3583,7 @@
 		</parameters>
 		<object-name>RightASIPlacard</object-name>
 	</effect>
-    <effect>
+	<effect>
 		<inherits-from>Aircraft/CRJ700-family/Models/Effects/CRJ700lightmap</inherits-from>
 		<parameters>
 			<lightmap-factor-prop>sim/model/lights/panel-lightmap</lightmap-factor-prop>
@@ -3539,9 +3602,9 @@
 		</parameters>
 		<object-name>AirVents</object-name>
 	</effect>
-    
-    <!-- Rembrandt !! -->
-    <effect>
+
+	<!-- Rembrandt !! -->
+	<effect>
 		<name>REMBRANDT transparency</name>
 		<inherits-from>Effects/model-transparent</inherits-from>
 		<object-name>StallLtCover</object-name>

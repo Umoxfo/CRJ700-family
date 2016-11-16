@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Bombardier CRJ700 series -->
+<!-- Multi-function display -->
+
+<PropertyList>
+
+	<path>ND_L.ac</path>
+
+	<animation>
+		<type>select</type>
+		<object-name>Power.off</object-name>
+		<condition>
+			<less-than>
+				<property>systems/DC/outputs/mfd1</property>
+				<value>15</value>
+			</less-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>ND.screenL</object-name>
+		<condition>
+			<greater-than>
+				<property>systems/DC/outputs/mfd1</property>
+				<value>15</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ND.screenL</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>CRJ700.showNd();</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>LeftControl</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/mfd/page</property>
+				<step>-1</step>
+				<min>1</min>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>CRJ700.setDisplayMode(getprop("instrumentation/mfd/page"))</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>RightControl</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/mfd/page</property>
+				<step>1</step>
+				<max>6</max>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>CRJ700.setDisplayMode(getprop("instrumentation/mfd/page"))</script>
+			</binding>
+		</action>
+	</animation>
+</PropertyList>

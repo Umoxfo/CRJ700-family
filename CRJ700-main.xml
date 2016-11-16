@@ -4,36 +4,36 @@
 <!-- Aircraft property settings common to all variants -->
 
 <PropertyList>
-	
+
 	<sim>
 		<description>Bombardier CRJ700 series</description>
-        <author>Ryan Miller, Henning S.</author>
-        <status>production</status>
-        <aircraft-version>1.6.0</aircraft-version>
+		<author>Ryan Miller, Henning S.</author>
+		<status>production</status>
+		<aircraft-version>1.6.0</aircraft-version>
 		<rating>
 			<FDM type="int">3</FDM>
 			<systems type="int">3</systems>
 			<cockpit type="int">4</cockpit>
 			<model type="int">4</model>
 		</rating>
-        
-        <tags>
-            <tag>transport</tag>
-            <tag>bombardier</tag>
-            <tag>jet</tag>
-            <tag>retractable-gear</tag>
-            <tag>ifr</tag>
-            <tag>twin-engine</tag>
-            <tag>glass-cockpit</tag>
+
+		<tags>
+			<tag>transport</tag>
+			<tag>bombardier</tag>
+			<tag>jet</tag>
+			<tag>retractable-gear</tag>
+			<tag>ifr</tag>
+			<tag>twin-engine</tag>
+			<tag>glass-cockpit</tag>
 		</tags>
-		
+
 		<startup>
 			<splash-texture>splash.jpg</splash-texture>
 		</startup>
-		
+
 		<checklists include="Checklists/checklists.xml" />
-        <tutorials include="Tutorials/CRJ700-tutorials.xml" />
-		
+		<tutorials include="Tutorials/CRJ700-tutorials.xml" />
+
 		<config>
 			<hide-welcome-msg type="bool">false</hide-welcome-msg>
 			<allow-autothrottle type="bool">false</allow-autothrottle>
@@ -43,13 +43,13 @@
 		</config>
 		<rendering>
 			<als-secondary-lights>
- 				<landing-light1-offset-deg>-1</landing-light1-offset-deg>
+				<landing-light1-offset-deg>-1</landing-light1-offset-deg>
 				<landing-light2-offset-deg>1</landing-light2-offset-deg>
 			</als-secondary-lights>
 		</rendering>
 		<hitches>
 			<aerotow>
-				<!-- MP enabled prop used to show/hide pushback vehicle. 
+				<!-- MP enabled prop used to show/hide pushback vehicle.
 					see property rules -->
 				<is-slave type="bool">0</is-slave>
 			</aerotow>
@@ -111,7 +111,7 @@
 				</ctr-cargo>
 				<aft-cargo>
 					<position-norm alias="/engines/engine[3]/rpm" />
-				</aft-cargo>				
+				</aft-cargo>
 			</door-positions>
 			<sound-enabled type="bool">false</sound-enabled>
 			<limits>
@@ -120,13 +120,17 @@
 			</limits>
 			<dimensions>
 				<nose-distance-m>16</nose-distance-m>
-			</dimensions>			
+			</dimensions>
 		</model>
-		
+
+		<instrument-options>
+			<canvas-popup-enable type="bool">true</canvas-popup-enable>
+		</instrument-options>
+
 		<instrumentation>
 			<path>Systems/CRJ700-instrumentation.xml</path>
 		</instrumentation>
-		
+
 		<systems>
 			<!-- Disable the generic electrical system -->
 			<electrical>
@@ -161,9 +165,9 @@
 				<path>Systems/CRJ700-pneumatic.xml</path>
 			</property-rule>
 		</systems>
-		
+
 		<chase-distance-m type="double">-30</chase-distance-m>
-		
+
 		<flaps>
 			<current-setting>0</current-setting>
 			<setting>0.000</setting>    <!-- 0 -->
@@ -173,7 +177,7 @@
 			<setting>0.666</setting>    <!-- 30 -->
 			<setting>1.000</setting>    <!-- 45 -->
 		</flaps>
-		
+
 		<weight n="0">
 			<name>Crew</name>
 			<weight-lb>250</weight-lb>
@@ -183,22 +187,22 @@
 		<weight n="1">
 			<name>PAX/Baggage</name>
 		</weight>
-		
+
 		<help include="CRJ700-help.xml" />
-		
+
 		<flight-recorder include="Systems/CRJ700-flight-recorder.xml" />
-		
+
 		<alarms>
 			<master-caution type="bool">false</master-caution>
 			<master-warning type="bool">false</master-warning>
 			<overspeed-warning type="bool">false</overspeed-warning>
 			<altitude-alert type="bool">false</altitude-alert>
 		</alarms>
-		
+
 		<dimensions>
 			<parkpos-offset-m type="float">0</parkpos-offset-m>
 		</dimensions>
-		
+
 		<aircraft-class type="string">gate</aircraft-class>
 		<aircraft-operator alias="/sim/model/livery/file" />
 		<aircraft-data>
@@ -244,10 +248,10 @@
 			<path>/instrumentation/use-QNH</path>
 			<path>/instrumentation/altimeter/setting-hpa</path>
 		</aircraft-data>
-		
+
 		<allow-toggle-cockpit type="bool">true</allow-toggle-cockpit>
 		<virtual-cockpit type="bool">true</virtual-cockpit>
-		
+
 		<menubar>
 			<default>
 				<menu n="100">
@@ -334,7 +338,7 @@
 						</binding>
 					</item>
 				<!-- for development -->
-					
+
 					<!-- 					<item>
 						<name>debug-output</name>
 						<label>Debug output</label>
@@ -345,7 +349,7 @@
 						</script>
 						</binding>
 						</item>
-						
+
 						<item>
 						<name>apdev</name>
 						<label>AP development</label>
@@ -356,12 +360,12 @@
 						</script>
 						</binding>
 					</item> -->
-					
+
 					<item>
 						<name>separator</name>
 						<label>--------</label>
 						<enabled>false</enabled>
-					</item>					
+					</item>
 					<item>
 						<label>In-flight start</label>
 						<binding>
@@ -429,11 +433,11 @@
 								CRJ700.dialogs.tiller.open();
 							</script>
 						</binding>
-					</item>	
+					</item>
 				</menu>
 			</default>
 		</menubar>
-		
+
 		<multiplay>
 			<generic>
 				<!-- Dual control transmission properties -->
@@ -448,7 +452,7 @@
 			</generic>
 		</multiplay>
 	</sim>
-	
+
 	<autopilot>
 		<flight-director-serviceable type="bool">true</flight-director-serviceable>
 		<autoflight-serviceable type="bool">true</autoflight-serviceable>
@@ -480,7 +484,7 @@
 			<target-climb-rate-fpm>0</target-climb-rate-fpm>
 		</internal>
 	</autopilot>
-	
+
 	<consumables>
 		<fuel>
 			<tank n="0">
@@ -504,7 +508,7 @@
 			</tank>
 		</fuel>
 	</consumables>
-	
+
 	<controls>
 		<ailerons>
 			<roll-disc type="bool">false</roll-disc>
@@ -666,7 +670,7 @@
 			<seatbelt-sign type="int">1</seatbelt-sign>
 		</switches>
 	</controls>
-	
+
 	<engines>
 		<apu>
 			<info>see engine2</info>
@@ -689,13 +693,13 @@
 			<pump-fail type="bool">false</pump-fail>
 			<SOV-fail type="bool">false</SOV-fail>
 			<!-- <door-norm alias="/engines/engine[2]/n1" /> -->
-		</engine>		
+		</engine>
 		<!-- engine 3 properties are used to transfer door positions via MP -->
 		<engine n="3">
 			<info>abused for MP door-positions</info>
 		</engine>
 	</engines>
-	
+
 	<fcs>
 		<autopilot>
 			<throttle-cmd-norm type="double">0</throttle-cmd-norm>
@@ -721,7 +725,7 @@
 		<brake-right-cmd-norm type="float">0</brake-right-cmd-norm>
 		<gear-down type="bool">true</gear-down>
 	</fcs>
-	
+
 	<gear>
 		<gear n="0">
 			<!-- to initialize sound properly -->
@@ -735,7 +739,7 @@
 			<has-brake></has-brake>
 		</gear>
 	</gear>
-	
+
 	<instrumentation>
 		<use-metric-altitude type="bool" archive="y">false</use-metric-altitude>
 		<use-QNH type="bool" archive="y">true</use-QNH>
@@ -788,7 +792,7 @@
 			</frequencies>
 			<serviceable type="bool">true</serviceable>
 			<hold type="bool">false</hold>
-		</dme>		
+		</dme>
 		<dme n="1">
 			<frequencies>
 				<source>/instrumentation/nav[1]/frequencies/selected-mhz</source>
@@ -1023,7 +1027,7 @@
 				<x-offset-m type="double">-0.986</x-offset-m>
 				<y-offset-m type="double">0</y-offset-m>
 				<z-offset-m type="double">3.72</z-offset-m>
-			</antenna>			
+			</antenna>
 		</radar-altimeter>
 		<radar-altimeter>
 			<serviceable type="bool">true</serviceable>
@@ -1084,7 +1088,7 @@
 		<!-- Ripped from the 777 -->
 		<efis>
 			<inputs>
-				<airport type="bool">true</airport>
+				<arpt type="bool">true</arpt>
 				<range type="int">10</range>
 				<sta type="bool">true</sta>
 				<tfc type="bool">true</tfc>
@@ -1092,6 +1096,7 @@
 			</inputs>
 			<mfd>
 				<mode-num type="int">2</mode-num>
+				<display-mode type="string">APP</display-mode>
 			</mfd>
 		</efis>
 		<nd>
@@ -1118,11 +1123,11 @@
 			<line-width type="double">3</line-width>
 		</nd>
 	</instrumentation>
-	
+
 	<input>
 		<keyboard include="Systems/CRJ700-keybindings.xml" />
 	</input>
-	
+
 	<surface-positions>
 		<left-wiper-pos-norm type="float">0</left-wiper-pos-norm>
 		<right-wiper-pos-norm type="float">0</right-wiper-pos-norm>
@@ -1131,7 +1136,7 @@
 		<left-speedbrake-pos-norm>0</left-speedbrake-pos-norm>
 		<right-speedbrake-pos-norm>0</right-speedbrake-pos-norm>
 	</surface-positions>
-	
+
 	<systems>
 		<AC>
 			<system>
@@ -1139,8 +1144,7 @@
 				<acext-freq>400</acext-freq>
 			</system>
 		</AC>
-		<DC>
-		</DC>
+		<DC></DC>
 		<electrical>
 			<!-->Compatibility mapping</!-->
 			<outputs>
@@ -1151,7 +1155,7 @@
 				<fuel-pump alias="/systems/DC/outputs/fuel-pump-right" />
 				<gps alias="/systems/DC/outputs/gps1" />
 				<!-- CRJ has a EGPWS (enhanced gnd. prox. warning sys. using AC 115V; mk-viii needs DC
-					<mk-viii alias="/systems/AC/outputs/egpws" />
+				<mk-viii alias="/systems/AC/outputs/egpws" />
 				<mk-viii alias="/systems/DC/outputs/radio-altimeter1" /> -->
 				<nav alias="/systems/DC/outputs/vhf-nav1" />
 				<panel-lights alias="/systems/AC/outputs/center-panel-int-lights" />
@@ -1262,14 +1266,13 @@
 			<leak-right type="bool">false</leak-right>
 		</pneumatic>
 	</systems>
-	
+
 	<nasal>
 		<fuel>
-           <file>Nasal/CRJ700-fuel.nas</file>
+		   <file>Nasal/CRJ700-fuel.nas</file>
 		</fuel>
-		
-        <raas>
-            <file>Nasal/raas.nas</file>
+		<raas>
+			<file>Nasal/raas.nas</file>
 		</raas>
 		<interactive_cdu>
 			<file>Nasal/cdu.nas</file>
@@ -1278,18 +1281,21 @@
 			<file>Nasal/runway.nas</file>
 			<file>Nasal/classes.nas</file>
 			<file>Nasal/engine.nas</file>
-			
+
 			<file>Nasal/wiper.nas</file>
 			<file>Nasal/doors.nas</file>
 			<file>Nasal/effects.nas</file>
 			<file>Nasal/electrical.nas</file>
 			<file>Nasal/hydraulic.nas</file>
 			<file>Nasal/instrumentation.nas</file>
-			
+
 			<file>Nasal/multiplayer.nas</file>
 			<file>Nasal/vnav.nas</file>
 			<file>Nasal/gui-dialogs.nas</file>
 			<file>Nasal/master.nas</file>
+
+			<file>Models/Instruments/MFD/ND.nas</file>
+			<file>Models/Instruments/MFD/display-modes.nas</file>
 		</CRJ700>
 		<controls>
 			<file>Nasal/controls.nas</file>
@@ -1308,5 +1314,5 @@
 			<file>Aircraft/Generic/DualControl/pilot-dual-control.nas</file>
 		</dual_control>
 	</nasal>
-	
+
 </PropertyList>
