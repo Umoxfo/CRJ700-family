@@ -5,7 +5,7 @@ MATERIAL "screen" rgb 1.0000 1.0000 1.0000  amb 1.0000 1.0000 1.0000  emis 1.000
 MATERIAL "black" rgb 0.0000 0.0000 0.0000  amb 0.0000 0.0000 0.0000  emis 0.0000 0.0000 0.0000  spec 0.0000 0.0000 0.0000  shi 0 trans 0.0000
 OBJECT world
 name "ND_L.ac"
-kids 5
+kids 6
 OBJECT poly
 name "Border"
 data 11
@@ -537,47 +537,6 @@ refs 3
 11 0.897843 0.000008
 kids 0
 OBJECT poly
-name "ND.screenL"
-data 10
-ND.screenL
-loc 0.0000000 0.0004510 -0.0001000
-crease 30.0
-texture "screen.png"
-texrep 1 1
-numvert 4
-0.00000 0.09100 -0.07300
-0.00000 -0.09100 -0.07300
-0.00000 -0.09100 0.07300
-0.00000 0.09100 0.07300
-numsurf 1
-SURF 0X0
-mat 2
-refs 4
-0 1.000670 0.999407
-3 0.000045 0.999407
-2 0.000045 0.000756
-1 1.000670 0.000756
-kids 0
-OBJECT poly
-name "Power.off"
-data 9
-Power.off
-crease 30.0
-numvert 4
-0.00000 0.09200 0.07400
-0.00000 -0.09200 0.07400
-0.00000 -0.09200 -0.07400
-0.00000 0.09200 -0.07400
-numsurf 1
-SURF 0X20
-mat 3
-refs 4
-3 0.000000 0.000000
-0 0.000000 0.000000
-1 0.000000 0.000000
-2 0.000000 0.000000
-kids 0
-OBJECT poly
 name "RightControl"
 data 17
 RightControl.mesh
@@ -756,4 +715,65 @@ refs 3
 13 0.314648 0.524209
 17 0.315251 0.385092
 12 0.379704 0.454800
+kids 0
+OBJECT poly
+name "ND.infoScreenL"
+data 15
+ND.infoScreenL
+crease 61.0
+texture "screen.png"
+texrep 1 1
+numvert 4
+0.00162 0.09000 0.07241
+0.00162 0.09000 -0.07159
+0.00162 0.04601 -0.07159
+0.00162 0.04601 0.07241
+numsurf 1
+SURF 0X0
+mat 2
+refs 4
+0 0.728906 0.475000
+3 0.778906 0.475000
+2 0.778906 0.525000
+1 0.728906 0.525000
+kids 0
+OBJECT poly
+name "ND.screenL"
+data 11
+ND.screenL
+crease 30.0
+texture "screen.png"
+texrep 1 1
+numvert 4
+0.00162 0.04601 -0.07159
+0.00162 -0.08999 -0.07159
+0.00162 -0.08999 0.07241
+0.00162 0.04601 0.07241
+numsurf 1
+SURF 0X0
+mat 2
+refs 4
+0 1.000670 0.999407
+3 0.000045 0.999407
+2 0.000045 0.000756
+1 1.000670 0.000756
+kids 0
+OBJECT poly
+name "Power.off"
+data 9
+Power.off
+crease 30.0
+numvert 4
+0.00162 0.09035 0.07243
+0.00162 -0.09015 0.07243
+0.00162 -0.09015 -0.07162
+0.00162 0.09035 -0.07162
+numsurf 1
+SURF 0X20
+mat 3
+refs 4
+3 0.000000 0.000000
+0 0.000000 0.000000
+1 0.000000 0.000000
+2 0.000000 0.000000
 kids 0
