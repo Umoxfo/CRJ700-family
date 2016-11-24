@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+	<params>
+		<page>instrumentation/mfd/page</page>
+		<tcas>instrumentation/mfd/tcas</tcas>
+		<wx>instrumentation/mfd/wx</wx>
+		<indicated-heading-deg>instrumentation/heading-indicator/indicated-heading-deg</indicated-heading-deg>
+		<true-airspeed-kt>instrumentation/airspeed-indicator/true-speed-kt</true-airspeed-kt>
+		<radar-range>instrumentation/radar/range</radar-range>
+	</params>
+	<ft-to-m type="float">0.3048</ft-to-m>
+
+	<colors>
+		<blue>
+			<red>0.349</red>
+			<green>0.767</green>
+			<blue>0.808</blue>
+		</blue>
+		<green>
+			<red>0.133</red>
+			<green>0.663</green>
+			<blue>0.145</blue>
+		</green>
+		<pink>
+			<red>0.984</red>
+			<green>0.616</green>
+			<blue>0.616</blue>
+		</pink>
+		<white>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</white>
+	</colors>
+
+	<text>
+		<name>Page 1 title</name>
+		<type>literal</type>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.007</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<text>COMPASS</text>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.06536</y-m>
+			<z-m>0.08147</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Page 2 title</name>
+		<type>literal</type>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.007</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<text>NAVAIDS</text>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.06536</y-m>
+			<z-m>0.08147</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Page 3 title off</name>
+		<type>literal</type>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.007</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<text>TCAS OFF</text>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.06536</y-m>
+			<z-m>0.08147</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<animation>
+		<type>select</type>
+		<object-name>Page 3 title off</object-name>
+		<condition>
+			<not>
+				<property alias="../../../../params/tcas" />
+			</not>
+		</condition>
+	</animation>
+	<text>
+		<name>Page 3 title on</name>
+		<type>literal</type>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.007</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<text>TCAS ON</text>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.06536</y-m>
+			<z-m>0.08147</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<animation>
+		<type>select</type>
+		<object-name>Page 3 title on</object-name>
+		<condition>
+			<property alias="../../../params/tcas" />
+		</condition>
+	</animation>
+	<text>
+		<name>Page 4 title</name>
+		<type>literal</type>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.007</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<text>MAP</text>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.06536</y-m>
+			<z-m>0.08147</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Page 5 title</name>
+		<type>literal</type>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.007</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<text>PLAN</text>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.06536</y-m>
+			<z-m>0.08147</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Page 6 title off</name>
+		<type>literal</type>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.007</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<text>WX OFF</text>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.06536</y-m>
+			<z-m>0.08147</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<animation>
+		<type>select</type>
+		<object-name>Page 6 title off</object-name>
+		<condition>
+			<not>
+				<property alias="../../../../params/wx" />
+			</not>
+		</condition>
+	</animation>
+	<text>
+		<name>Page 6 title on</name>
+		<type>literal</type>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.007</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<text>WX ON</text>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.06536</y-m>
+			<z-m>0.08147</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<animation>
+		<type>select</type>
+		<object-name>Page 6 title on</object-name>
+		<condition>
+			<property alias="../../../params/wx" />
+		</condition>
+	</animation>
+	<text>
+		<name>UTC</name>
+		<type>literal</type>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.006</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<text>UTC</text>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.06536</y-m>
+			<z-m>0.07447</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>UTC value</name>
+		<type>string-value</type>
+		<property>sim/time/gmt-string</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.006</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%.5s</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.05379</y-m>
+			<z-m>0.07447</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>TAS</name>
+		<type>literal</type>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.006</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<text>TAS</text>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.03608</y-m>
+			<z-m>0.07447</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>TAS value</name>
+		<type>number-value</type>
+		<property alias="../../params/true-airspeed-kt" />
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.006</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%-3.f</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.02486</y-m>
+			<z-m>0.07447</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>GS text</name>
+		<type>literal</type>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.006</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<text>GS</text>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.01127</y-m>
+			<z-m>0.07447</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>GS value</name>
+		<type>number-value</type>
+		<property>velocities/groundspeed-kt</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.006</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%-3.f</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.00351</y-m>
+			<z-m>0.07447</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>SAT</name>
+		<type>literal</type>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.006</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<text>SAT</text>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>0.0158</y-m>
+			<z-m>0.07447</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>SAT value</name>
+		<type>number-value</type>
+		<property>environment/temperature-degc</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.006</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%2.fC</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>0.02842</y-m>
+			<z-m>0.07447</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>TAT</name>
+		<type>literal</type>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.006</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<text>TAT</text>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>0.04105</y-m>
+			<z-m>0.07447</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>TAT value</name>
+		<type>number-value</type>
+		<property>environment/total-air-temperature-degc</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.006</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%2.fC</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>0.05311</y-m>
+			<z-m>0.07447</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 1 ID</name>
+		<type>string-value</type>
+		<property>autopilot/route-manager/route/wp[0]/id</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%s</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.06536</y-m>
+			<z-m>0.06247</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 1 distance</name>
+		<type>number-value</type>
+		<property>autopilot/route-manager/route/wp[0]/leg-distance-nm</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%3.fNM</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.0325</y-m>
+			<z-m>0.06247</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 1 course</name>
+		<type>number-value</type>
+		<property>autopilot/route-manager/route/wp[0]/leg-bearing-true-deg</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>CRS %03.f</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.00196</y-m>
+			<z-m>0.06247</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 1 altitude</name>
+		<type>number-value</type>
+		<property>autopilot/route-manager/route/wp[0]/altitude-ft</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%5.fFT</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>0.03422</y-m>
+			<z-m>0.06247</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 1 altitude (metric)</name>
+		<type>number-value</type>
+		<property>autopilot/route-manager/route/wp[0]/altitude-ft</property>
+		<scale alias="../../ft-to-m" />
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%5.fM</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>0.03422</y-m>
+			<z-m>0.06247</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<animation>
+		<type>select</type>
+		<object-name>Waypoint 1 ID</object-name>
+		<object-name>Waypoint 1 distance</object-name>
+		<object-name>Waypoint 1 course</object-name>
+		<object-name>Waypoint 1 altitude</object-name>
+		<object-name>Waypoint 1 altitude (metric)</object-name>
+		<condition>
+			<greater-than-equals>
+				<property>autopilot/route-manager/route/num</property>
+				<value>1</value>
+			</greater-than-equals>
+		</condition>
+	</animation>
+	<text>
+		<name>Waypoint 2 ID</name>
+		<type>string-value</type>
+		<property>autopilot/route-manager/route/wp[1]/id</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%s</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.06536</y-m>
+			<z-m>0.05747</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 2 distance</name>
+		<type>number-value</type>
+		<property>autopilot/route-manager/route/wp[1]/leg-distance-nm</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%3.fNM</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.0325</y-m>
+			<z-m>0.05747</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 2 course</name>
+		<type>number-value</type>
+		<property>autopilot/route-manager/route/wp[1]/leg-bearing-true-deg</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>CRS %03.f</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.00196</y-m>
+			<z-m>0.05747</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 2 altitude</name>
+		<type>number-value</type>
+		<property>autopilot/route-manager/route/wp[1]/altitude-ft</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%5.fFT</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>0.03422</y-m>
+			<z-m>0.05747</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 2 altitude (metric)</name>
+		<type>number-value</type>
+		<property>autopilot/route-manager/route/wp[1]/altitude-ft</property>
+		<scale alias="../../ft-to-m" />
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%5.fM</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>0.03422</y-m>
+			<z-m>0.05747</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<animation>
+		<type>select</type>
+		<object-name>Waypoint 2 ID</object-name>
+		<object-name>Waypoint 2 distance</object-name>
+		<object-name>Waypoint 2 course</object-name>
+		<object-name>Waypoint 2 altitude</object-name>
+		<object-name>Waypoint 2 altitude (metric)</object-name>
+		<condition>
+			<greater-than-equals>
+				<property>autopilot/route-manager/route/num</property>
+				<value>2</value>
+			</greater-than-equals>
+		</condition>
+	</animation>
+	<text>
+		<name>Waypoint 3 ID</name>
+		<type>string-value</type>
+		<property>autopilot/route-manager/route/wp[2]/id</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%s</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.06536</y-m>
+			<z-m>0.05247</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 3 distance</name>
+		<type>number-value</type>
+		<property>autopilot/route-manager/route/wp[2]/leg-distance-nm</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%3.fNM</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.0325</y-m>
+			<z-m>0.05247</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 3 course</name>
+		<type>number-value</type>
+		<property>autopilot/route-manager/route/wp[2]/leg-bearing-true-deg</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>CRS %03.f</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.00196</y-m>
+			<z-m>0.05247</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 3 altitude</name>
+		<type>number-value</type>
+		<property>autopilot/route-manager/route/wp[2]/altitude-ft</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%5.fFT</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>0.03422</y-m>
+			<z-m>0.05247</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 3 altitude (metric)</name>
+		<type>number-value</type>
+		<property>autopilot/route-manager/route/wp[2]/altitude-ft</property>
+		<scale alias="../../ft-to-m" />
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%5.fM</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>0.03422</y-m>
+			<z-m>0.05247</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<animation>
+		<type>select</type>
+		<object-name>Waypoint 3 ID</object-name>
+		<object-name>Waypoint 3 distance</object-name>
+		<object-name>Waypoint 3 course</object-name>
+		<object-name>Waypoint 3 altitude</object-name>
+		<object-name>Waypoint 3 altitude (metric)</object-name>
+		<condition>
+			<greater-than-equals>
+				<property>autopilot/route-manager/route/num</property>
+				<value>3</value>
+			</greater-than-equals>
+		</condition>
+	</animation>
+	<text>
+		<name>Waypoint 4 ID</name>
+		<type>string-value</type>
+		<property>autopilot/route-manager/route/wp[3]/id</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%s</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.06536</y-m>
+			<z-m>0.04747</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 4 distance</name>
+		<type>number-value</type>
+		<property>autopilot/route-manager/route/wp[3]/leg-distance-nm</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%3.fNM</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.0325</y-m>
+			<z-m>0.04747</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 4 course</name>
+		<type>number-value</type>
+		<property>autopilot/route-manager/route/wp[3]/leg-bearing-true-deg</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>CRS %03.f</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.00196</y-m>
+			<z-m>0.04747</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 4 altitude</name>
+		<type>number-value</type>
+		<property>autopilot/route-manager/route/wp[3]/altitude-ft</property>
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%5.fFT</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>0.03422</y-m>
+			<z-m>0.04747</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Waypoint 4 altitude (metric)</name>
+		<type>number-value</type>
+		<property>autopilot/route-manager/route/wp[3]/altitude-ft</property>
+		<scale alias="../../ft-to-m" />
+		<axis-alignment>yz-plane</axis-alignment>
+		<alignment>left-center</alignment>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio>1.5</character-aspect-ratio>
+		<font>LiberationFonts/LiberationSansNarrow-Bold.ttf</font>
+		<format>%5.fM</format>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>0.03422</y-m>
+			<z-m>0.04747</z-m>
+		</offsets>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<animation>
+		<type>select</type>
+		<object-name>Waypoint 4 ID</object-name>
+		<object-name>Waypoint 4 distance</object-name>
+		<object-name>Waypoint 4 course</object-name>
+		<object-name>Waypoint 4 altitude</object-name>
+		<object-name>Waypoint 4 altitude (metric)</object-name>
+		<condition>
+			<greater-than-equals>
+				<property>autopilot/route-manager/route/num</property>
+				<value>4</value>
+			</greater-than-equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>material</type>
+		<object-name>Page 1 title</object-name>
+		<object-name>Page 2 title</object-name>
+		<object-name>Page 3 title off</object-name>
+		<object-name>Page 3 title on</object-name>
+		<object-name>Page 4 title</object-name>
+		<object-name>Page 5 title</object-name>
+		<object-name>Page 6 title off</object-name>
+		<object-name>Page 6 title on</object-name>
+		<object-name>Waypoint 1 ID</object-name>
+		<object-name>Waypoint 1 distance</object-name>
+		<object-name>Waypoint 1 course</object-name>
+		<object-name>Waypoint 1 altitude</object-name>
+		<object-name>Waypoint 1 altitude (metric)</object-name>
+		<object-name>UTC</object-name>
+		<ambient>
+			<red alias="../../../colors/blue/red" />
+			<green alias="../../../colors/blue/green" />
+			<blue alias="../../../colors/blue/blue" />
+		</ambient>
+		<diffuse>
+			<red alias="../../../colors/blue/red" />
+			<green alias="../../../colors/blue/green" />
+			<blue alias="../../../colors/blue/blue" />
+		</diffuse>
+		<emission>
+			<red alias="../../../colors/blue/red" />
+			<green alias="../../../colors/blue/green" />
+			<blue alias="../../../colors/blue/blue" />
+			<factor-prop>controls/lighting/display-norm</factor-prop>
+		</emission>
+	</animation>
+	<animation>
+		<type>material</type>
+		<object-name>TAS</object-name>
+		<object-name>GS text</object-name>
+		<object-name>SAT</object-name>
+		<object-name>TAT</object-name>
+		<ambient>
+			<red alias="../../../colors/green/red" />
+			<green alias="../../../colors/green/green" />
+			<blue alias="../../../colors/green/blue" />
+		</ambient>
+		<diffuse>
+			<red alias="../../../colors/green/red" />
+			<green alias="../../../colors/green/green" />
+			<blue alias="../../../colors/green/blue" />
+		</diffuse>
+		<emission>
+			<red alias="../../../colors/green/red" />
+			<green alias="../../../colors/green/green" />
+			<blue alias="../../../colors/green/blue" />
+			<factor-prop>controls/lighting/display-norm</factor-prop>
+		</emission>
+	</animation>
+	<animation>
+		<type>material</type>
+		<object-name>Waypoint 2 ID</object-name>
+		<object-name>Waypoint 2 distance</object-name>
+		<object-name>Waypoint 2 course</object-name>
+		<object-name>Waypoint 2 altitude</object-name>
+		<object-name>Waypoint 2 altitude (metric)</object-name>
+		<ambient>
+			<red alias="../../../colors/pink/red" />
+			<green alias="../../../colors/pink/green" />
+			<blue alias="../../../colors/pink/blue" />
+		</ambient>
+		<diffuse>
+			<red alias="../../../colors/pink/red" />
+			<green alias="../../../colors/pink/green" />
+			<blue alias="../../../colors/pink/blue" />
+		</diffuse>
+		<emission>
+			<red alias="../../../colors/pink/red" />
+			<green alias="../../../colors/pink/green" />
+			<blue alias="../../../colors/pink/blue" />
+			<factor-prop>controls/lighting/display-norm</factor-prop>
+		</emission>
+	</animation>
+	<animation>
+		<type>material</type>
+		<object-name>UTC value</object-name>
+		<object-name>TAS value</object-name>
+		<object-name>GS value</object-name>
+		<object-name>SAT value</object-name>
+		<object-name>TAT value</object-name>
+		<object-name>Waypoint 3 ID</object-name>
+		<object-name>Waypoint 3 distance</object-name>
+		<object-name>Waypoint 3 course</object-name>
+		<object-name>Waypoint 3 altitude</object-name>
+		<object-name>Waypoint 3 altitude (metric)</object-name>
+		<object-name>Waypoint 4 ID</object-name>
+		<object-name>Waypoint 4 distance</object-name>
+		<object-name>Waypoint 4 course</object-name>
+		<object-name>Waypoint 4 altitude</object-name>
+		<object-name>Waypoint 4 altitude (metric)</object-name>
+		<ambient>
+			<red alias="../../../colors/white/red" />
+			<green alias="../../../colors/white/green" />
+			<blue alias="../../../colors/white/blue" />
+		</ambient>
+		<diffuse>
+			<red alias="../../../colors/white/red" />
+			<green alias="../../../colors/white/green" />
+			<blue alias="../../../colors/white/blue" />
+		</diffuse>
+		<emission>
+			<red alias="../../../colors/white/red" />
+			<green alias="../../../colors/white/green" />
+			<blue alias="../../../colors/white/blue" />
+			<factor-prop>controls/lighting/display-norm</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Page 1 title</object-name>
+		<condition>
+			<equals>
+				<property alias="../../../../params/page" />
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Page 2 title</object-name>
+		<condition>
+			<equals>
+				<property alias="../../../../params/page" />
+				<value>2</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Page 3 title off</object-name>
+		<object-name>Page 3 title on</object-name>
+		<condition>
+			<equals>
+				<property alias="../../../../params/page" />
+				<value>3</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Page 4 title</object-name>
+		<condition>
+			<equals>
+				<property alias="../../../../params/page" />
+				<value>4</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Page 5 title</object-name>
+		<condition>
+			<equals>
+				<property alias="../../../../params/page" />
+				<value>5</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Page 6 title off</object-name>
+		<object-name>Page 6 title on</object-name>
+		<condition>
+			<equals>
+				<property alias="../../../../params/page" />
+				<value>6</value>
+			</equals>
+		</condition>
+	</animation>
+
+</PropertyList>
