@@ -24,6 +24,7 @@
 		</condition>
 	</animation>
 
+	<animation>
 		<type>select</type>
 		<object-name>Screen</object-name>
 		<condition>
