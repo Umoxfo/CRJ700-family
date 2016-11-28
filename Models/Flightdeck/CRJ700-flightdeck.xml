@@ -133,7 +133,8 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/CRJ700-family/Models/Instruments/SidePanel1/sidepanel.xml</path>
+		<path>Aircraft/CRJ700-family/Models/Instruments/SidePanel1/sidepanel_L.xml</path>
+<!--
 		<overlay>
 			<params>
 				<mfd-tcas>instrumentation/mfd[0]/tcas</mfd-tcas>
@@ -144,6 +145,7 @@
 				<powerN>systems/AC/outputs/pilot-panel-int-lights</powerN>
 			</params>
 		</overlay>
+-->
 		<offsets>
 			<x-m>-1.768</x-m>
 			<y-m>-0.78</y-m>

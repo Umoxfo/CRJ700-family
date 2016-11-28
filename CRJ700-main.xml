@@ -224,9 +224,6 @@
 			<path>/sim/weight[0]/weight-lb</path>
 			<path>/sim/weight[1]/weight-lb</path>
 			<path>/controls/gear/enable-tiller</path>
-			<path>/instrumentation/mfd[0]/page</path>
-			<path>/instrumentation/mfd[0]/tcas</path>
-			<path>/instrumentation/mfd[0]/wx</path>
 			<path>/instrumentation/mfd[1]/page</path>
 			<path>/instrumentation/mfd[1]/tcas</path>
 			<path>/instrumentation/mfd[1]/wx</path>
@@ -999,15 +996,10 @@
 		<nav>
 			<volume type="float">0</volume>
 		</nav>
-		<nav>
+		<nav n="1">
 			<volume type="float">0</volume>
 		</nav>
-		<mfd>
-			<page type="int" archive="y">1</page>
-			<tcas type="bool" archive="y">true</tcas>
-			<wx type="bool" archive="y">true</wx>
-		</mfd>
-		<mfd>
+		<mfd n="1">
 			<page type="int" archive="y">1</page>
 			<tcas type="bool" archive="y">true</tcas>
 			<wx type="bool" archive="y">true</wx>
@@ -1050,7 +1042,7 @@
 				<category-3 type="int">2</category-3>
 				<category-4 type="int">13</category-4>
 				<category-5 type="int">0</category-5>
-				<category-6 type="int">0</category-6>
+				<category-6 type="int">1</category-6>
 				<category-7 type="int">124</category-7>
 				<category-8 type="int">4</category-8> <!-- radio altimeter source: 3:from yasim, 4: instrumentation/radar-altimeter -->
 				<category-9 type="int">3</category-9>
@@ -1088,6 +1080,20 @@
 		<!-- Ripped from the 777 -->
 		<efis>
 			<inputs>
+				<tfc  type="bool">false</tfc>
+				<sta  type="bool">false</sta>
+				<arpt type="bool">false</arpt>
+				<wpt  type="bool">false</wpt>
+				<wxr  type="bool">false</wxr>
+				<range-nm type="int">10</range-nm>
+			</inputs>
+			<mfd>
+				<mode-num type="int">1</mode-num>
+				<display-type type="string">LCD</display-type>
+			</mfd>
+		</efis>
+		<efis n="1">
+			<inputs>
 				<arpt type="bool">true</arpt>
 				<range type="int">10</range>
 				<sta type="bool">true</sta>
@@ -1100,8 +1106,8 @@
 			</mfd>
 		</efis>
 		<nd>
-			<radar-texture-path type="string">Models/Instruments/MFD/od_wxradar.png</radar-texture-path>
-			<symbol-texture-path type="string">Models/Instruments/MFD/nd_symbols.png</symbol-texture-path>
+			<radar-texture-path type="string">Aircraft/CRJ700-family/Models/Instruments/MFD/od_wxradar.png</radar-texture-path>
+			<symbol-texture-path type="string">Aircraft/CRJ700-family/Models/Instruments/MFD/nd_symbols.png</symbol-texture-path>
 			<symbol-texture-size type="int">512</symbol-texture-size>
 			<font>
 				<color>
@@ -1115,7 +1121,7 @@
 				<line-spacing type="float">0.01</line-spacing>
 			</font>
 			<serviceable type="bool">true</serviceable>
-			<range n="0" alias="/instrumentation/efis/inputs/range"/>
+			<range n="0" alias="/instrumentation/efis/inputs/range-nm" />
 			<aircraft-heading-up type="bool">true</aircraft-heading-up>
 			<heading-up-deg type="float">0.01</heading-up-deg>
 			<x-center type="float">0.5</x-center>

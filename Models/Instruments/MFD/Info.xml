@@ -2,12 +2,12 @@
 
 <PropertyList>
 	<params>
-		<page>instrumentation/mfd/page</page>
-		<tcas>instrumentation/mfd/tcas</tcas>
-		<wx>instrumentation/mfd/wx</wx>
+		<page>instrumentation/efis/mfd/mode-num</page>
+		<tcas>instrumentation/efis/inputs/tfc</tcas>
+		<wx>instrumentation/efis/inputs/wxr</wx>
 		<indicated-heading-deg>instrumentation/heading-indicator/indicated-heading-deg</indicated-heading-deg>
 		<true-airspeed-kt>instrumentation/airspeed-indicator/true-speed-kt</true-airspeed-kt>
-		<radar-range>instrumentation/radar/range</radar-range>
+		<radar-range>instrumentation/efis/inputs/range-nm</radar-range>
 	</params>
 	<ft-to-m type="float">0.3048</ft-to-m>
 
@@ -96,7 +96,7 @@
 		<object-name>Page 3 title off</object-name>
 		<condition>
 			<not>
-				<property alias="../../../../params/tcas" />
+				<property alias="/params/tcas" />
 			</not>
 		</condition>
 	</animation>
@@ -123,7 +123,7 @@
 		<type>select</type>
 		<object-name>Page 3 title on</object-name>
 		<condition>
-			<property alias="../../../params/tcas" />
+			<property alias="/params/tcas" />
 		</condition>
 	</animation>
 	<text>
@@ -188,7 +188,7 @@
 		<object-name>Page 6 title off</object-name>
 		<condition>
 			<not>
-				<property alias="../../../../params/wx" />
+				<property alias="/params/wx" />
 			</not>
 		</condition>
 	</animation>
@@ -215,7 +215,7 @@
 		<type>select</type>
 		<object-name>Page 6 title on</object-name>
 		<condition>
-			<property alias="../../../params/wx" />
+			<property alias="/params/wx" />
 		</condition>
 	</animation>
 	<text>
@@ -279,7 +279,7 @@
 	<text>
 		<name>TAS value</name>
 		<type>number-value</type>
-		<property alias="../../params/true-airspeed-kt" />
+		<property alias="/params/true-airspeed-kt" />
 		<axis-alignment>yz-plane</axis-alignment>
 		<alignment>left-center</alignment>
 		<character-size>0.006</character-size>
@@ -497,7 +497,7 @@
 		<name>Waypoint 1 altitude (metric)</name>
 		<type>number-value</type>
 		<property>autopilot/route-manager/route/wp[0]/altitude-ft</property>
-		<scale alias="../../ft-to-m" />
+		<scale alias="/ft-to-m" />
 		<axis-alignment>yz-plane</axis-alignment>
 		<alignment>left-center</alignment>
 		<character-size>0.005</character-size>
@@ -612,7 +612,7 @@
 		<name>Waypoint 2 altitude (metric)</name>
 		<type>number-value</type>
 		<property>autopilot/route-manager/route/wp[1]/altitude-ft</property>
-		<scale alias="../../ft-to-m" />
+		<scale alias="/ft-to-m" />
 		<axis-alignment>yz-plane</axis-alignment>
 		<alignment>left-center</alignment>
 		<character-size>0.005</character-size>
@@ -727,7 +727,7 @@
 		<name>Waypoint 3 altitude (metric)</name>
 		<type>number-value</type>
 		<property>autopilot/route-manager/route/wp[2]/altitude-ft</property>
-		<scale alias="../../ft-to-m" />
+		<scale alias="/ft-to-m" />
 		<axis-alignment>yz-plane</axis-alignment>
 		<alignment>left-center</alignment>
 		<character-size>0.005</character-size>
@@ -842,7 +842,7 @@
 		<name>Waypoint 4 altitude (metric)</name>
 		<type>number-value</type>
 		<property>autopilot/route-manager/route/wp[3]/altitude-ft</property>
-		<scale alias="../../ft-to-m" />
+		<scale alias="/ft-to-m" />
 		<axis-alignment>yz-plane</axis-alignment>
 		<alignment>left-center</alignment>
 		<character-size>0.005</character-size>
@@ -890,19 +890,19 @@
 		<object-name>Waypoint 1 altitude (metric)</object-name>
 		<object-name>UTC</object-name>
 		<ambient>
-			<red alias="../../../colors/blue/red" />
-			<green alias="../../../colors/blue/green" />
-			<blue alias="../../../colors/blue/blue" />
+			<red alias="/colors/blue/red" />
+			<green alias="/colors/blue/green" />
+			<blue alias="/colors/blue/blue" />
 		</ambient>
 		<diffuse>
-			<red alias="../../../colors/blue/red" />
-			<green alias="../../../colors/blue/green" />
-			<blue alias="../../../colors/blue/blue" />
+			<red alias="/colors/blue/red" />
+			<green alias="/colors/blue/green" />
+			<blue alias="/colors/blue/blue" />
 		</diffuse>
 		<emission>
-			<red alias="../../../colors/blue/red" />
-			<green alias="../../../colors/blue/green" />
-			<blue alias="../../../colors/blue/blue" />
+			<red alias="/colors/blue/red" />
+			<green alias="/colors/blue/green" />
+			<blue alias="/colors/blue/blue" />
 			<factor-prop>controls/lighting/display-norm</factor-prop>
 		</emission>
 	</animation>
@@ -913,19 +913,19 @@
 		<object-name>SAT</object-name>
 		<object-name>TAT</object-name>
 		<ambient>
-			<red alias="../../../colors/green/red" />
-			<green alias="../../../colors/green/green" />
-			<blue alias="../../../colors/green/blue" />
+			<red alias="/colors/green/red" />
+			<green alias="/colors/green/green" />
+			<blue alias="/colors/green/blue" />
 		</ambient>
 		<diffuse>
-			<red alias="../../../colors/green/red" />
-			<green alias="../../../colors/green/green" />
-			<blue alias="../../../colors/green/blue" />
+			<red alias="/colors/green/red" />
+			<green alias="/colors/green/green" />
+			<blue alias="/colors/green/blue" />
 		</diffuse>
 		<emission>
-			<red alias="../../../colors/green/red" />
-			<green alias="../../../colors/green/green" />
-			<blue alias="../../../colors/green/blue" />
+			<red alias="/colors/green/red" />
+			<green alias="/colors/green/green" />
+			<blue alias="/colors/green/blue" />
 			<factor-prop>controls/lighting/display-norm</factor-prop>
 		</emission>
 	</animation>
@@ -937,19 +937,19 @@
 		<object-name>Waypoint 2 altitude</object-name>
 		<object-name>Waypoint 2 altitude (metric)</object-name>
 		<ambient>
-			<red alias="../../../colors/pink/red" />
-			<green alias="../../../colors/pink/green" />
-			<blue alias="../../../colors/pink/blue" />
+			<red alias="/colors/pink/red" />
+			<green alias="/colors/pink/green" />
+			<blue alias="/colors/pink/blue" />
 		</ambient>
 		<diffuse>
-			<red alias="../../../colors/pink/red" />
-			<green alias="../../../colors/pink/green" />
-			<blue alias="../../../colors/pink/blue" />
+			<red alias="/colors/pink/red" />
+			<green alias="/colors/pink/green" />
+			<blue alias="/colors/pink/blue" />
 		</diffuse>
 		<emission>
-			<red alias="../../../colors/pink/red" />
-			<green alias="../../../colors/pink/green" />
-			<blue alias="../../../colors/pink/blue" />
+			<red alias="/colors/pink/red" />
+			<green alias="/colors/pink/green" />
+			<blue alias="/colors/pink/blue" />
 			<factor-prop>controls/lighting/display-norm</factor-prop>
 		</emission>
 	</animation>
@@ -971,19 +971,19 @@
 		<object-name>Waypoint 4 altitude</object-name>
 		<object-name>Waypoint 4 altitude (metric)</object-name>
 		<ambient>
-			<red alias="../../../colors/white/red" />
-			<green alias="../../../colors/white/green" />
-			<blue alias="../../../colors/white/blue" />
+			<red alias="/colors/white/red" />
+			<green alias="/colors/white/green" />
+			<blue alias="/colors/white/blue" />
 		</ambient>
 		<diffuse>
-			<red alias="../../../colors/white/red" />
-			<green alias="../../../colors/white/green" />
-			<blue alias="../../../colors/white/blue" />
+			<red alias="/colors/white/red" />
+			<green alias="/colors/white/green" />
+			<blue alias="/colors/white/blue" />
 		</diffuse>
 		<emission>
-			<red alias="../../../colors/white/red" />
-			<green alias="../../../colors/white/green" />
-			<blue alias="../../../colors/white/blue" />
+			<red alias="/colors/white/red" />
+			<green alias="/colors/white/green" />
+			<blue alias="/colors/white/blue" />
 			<factor-prop>controls/lighting/display-norm</factor-prop>
 		</emission>
 	</animation>
@@ -993,7 +993,7 @@
 		<object-name>Page 1 title</object-name>
 		<condition>
 			<equals>
-				<property alias="../../../../params/page" />
+				<property alias="/params/page" />
 				<value>1</value>
 			</equals>
 		</condition>
@@ -1003,7 +1003,7 @@
 		<object-name>Page 2 title</object-name>
 		<condition>
 			<equals>
-				<property alias="../../../../params/page" />
+				<property alias="/params/page" />
 				<value>2</value>
 			</equals>
 		</condition>
@@ -1014,7 +1014,7 @@
 		<object-name>Page 3 title on</object-name>
 		<condition>
 			<equals>
-				<property alias="../../../../params/page" />
+				<property alias="/params/page" />
 				<value>3</value>
 			</equals>
 		</condition>
@@ -1024,7 +1024,7 @@
 		<object-name>Page 4 title</object-name>
 		<condition>
 			<equals>
-				<property alias="../../../../params/page" />
+				<property alias="/params/page" />
 				<value>4</value>
 			</equals>
 		</condition>
@@ -1034,7 +1034,7 @@
 		<object-name>Page 5 title</object-name>
 		<condition>
 			<equals>
-				<property alias="../../../../params/page" />
+				<property alias="/params/page" />
 				<value>5</value>
 			</equals>
 		</condition>
@@ -1045,7 +1045,7 @@
 		<object-name>Page 6 title on</object-name>
 		<condition>
 			<equals>
-				<property alias="../../../../params/page" />
+				<property alias="/params/page" />
 				<value>6</value>
 			</equals>
 		</condition>

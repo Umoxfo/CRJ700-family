@@ -43,7 +43,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>CRJ700.showNd();</script>
+				<script>CRJ700.showNd()</script>
 			</binding>
 		</action>
 	</animation>
@@ -55,14 +55,19 @@
 			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
-				<command>property-adjust</command>
-				<property>instrumentation/mfd/page</property>
-				<step>-1</step>
-				<min>1</min>
+				<command>property-cycle</command>
+				<property>instrumentation/efis/mfd/page</property>
+				<wrap>false</wrap>
+				<value>WEATHER</value>
+				<value>PLAN</value>
+				<value>MAP</value>
+				<value>TCAS</value>
+				<value>NAVAID</value>
+				<value>COMPASS</value>
 			</binding>
 			<binding>
 				<command>nasal</command>
-				<script>CRJ700.setDisplayMode("instrumentation/efis/", getprop("instrumentation/mfd/page"))</script>
+				<script>CRJ700.setDisplayMode("captain")</script>
 			</binding>
 		</action>
 	</animation>
@@ -74,19 +79,24 @@
 			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
-				<command>property-adjust</command>
-				<property>instrumentation/mfd/page</property>
-				<step>1</step>
-				<max>6</max>
+				<command>property-cycle</command>
+				<property>instrumentation/efis/mfd/page</property>
+				<wrap>false</wrap>
+				<value>COMPASS</value>
+				<value>NAVAID</value>
+				<value>TCAS</value>
+				<value>MAP</value>
+				<value>PLAN</value>
+				<value>WEATHER</value>
 			</binding>
 			<binding>
 				<command>nasal</command>
-				<script>CRJ700.setDisplayMode("instrumentation/efis/", getprop("instrumentation/mfd/page"))</script>
+				<script>CRJ700.setDisplayMode("captain")</script>
 			</binding>
 		</action>
 	</animation>
 
-		<!-- Lightmaps -->
+	<!-- Lightmaps -->
 	<effect>
 		<inherits-from>Aircraft/CRJ700-family/Models/Effects/CRJ700lightmap</inherits-from>
 		<parameters>
@@ -101,7 +111,7 @@
 				<use alias="../../lightmap-factor-prop" />
 			</lightmap-factor>
 			<texture n="3">
-				<image>Aircraft/Generic/generic-lightmap.png</image>
+				<image>Aircraft/CRJ700-family/Models/Effects/CRJ700lightmap/mfd-left-lightmap.png</image>
 			</texture>
 		</parameters>
 		<object-name>Border</object-name>

@@ -21,7 +21,7 @@ var nd_display = {};
 
 var myCockpit_switches = {
     # symbolic alias : relative property (as used in bindings), initial value, type
-    'toggle_range':         {path: '/inputs/range-nm', value:50, type:'INT'},
+    'toggle_range':         {path: '/inputs/range-nm', value:40, type:'INT'},
     'toggle_weather':       {path: '/inputs/wxr', value:0, type:'BOOL'},
     'toggle_airports':      {path: '/inputs/arpt', value:1, type:'BOOL'},
     'toggle_stations':      {path: '/inputs/sta', value:1, type:'BOOL'},

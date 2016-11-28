@@ -1,3 +1,8 @@
+var displays = {
+	captain: "instrumentation/efis",
+	first_officer: "instrumentation/efis[1]",
+};
+
 var symbols = {
 	centered:     "inputs/nd-centered",
 	display_mode: "mfd/display-mode",
@@ -8,47 +13,47 @@ var symbols = {
 
 var displayModes = {
 	# default
-	def: func (path) {
+	def: func(path) {
 		var tmp = [symbols.centered, symbols.traffic, symbols.terrain, symbols.weather];
 		foreach(s; tmp) {
 			setprop(path, s, 0);
 		}
 	},
-	# COMPASS
-	1: func(path) {
+	COMPASS: func(path) {
 		setprop(path, symbols.centered, 1);
 		setprop(path, symbols.display_mode, "APP");
 	},
-	# NAVAIDS
-	2: func(path) {
+	NAVAID: func(path) {
 		setprop(path, symbols.display_mode, "VOR");
 	},
-	# TCAS
-	3: func(path) {
+	TCAS: func(path) {
 		setprop(path, symbols.display_mode, "VOR");
 		setprop(path, symbols.traffic, 1);
 	},
-	# MAP
-	4: func(path) {
+	MAP: func(path) {
 		setprop(path, symbols.centered, 1);
 		setprop(path, symbols.display_mode, "MAP");
 		setprop(path, symbols.terrain, 1);
 	},
-	# PLAN
-	5: func (path) {
+	PLAN: func(path) {
 		setprop(path, symbols.centered, 1);
 		setprop(path, symbols.display_mode, "PLAN");
 	},
-	# Weather
-	6: func (path) {
+	WEATHER: func(path) {
 		setprop(path, symbols.display_mode, "VOR");
 		setprop(path, symbols.weather, 1);
 	},
 };
 
-displayModes[1];
+var setDisplayMode = func(outputDisp) {
+	var path = displays[outputDisp];
 
-var setDisplayMode = func(path, index) {
 	displayModes.def(path);
-	displayModes[index](path);
+	displayModes[getprop(path, "mfd/page")](path);
+};
+
+func() {
+	foreach (var hash; displays) {
+		displayModes.COMPASS(hash.path);
+	};
 };
